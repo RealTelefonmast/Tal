@@ -246,7 +246,10 @@
 					<li>Male</li>
 				</alienbodytypes>
 				<aliencrowntypes>
-					<li>Sergal_Head</li>
+					<li>Sergal_Head_A</li>
+					<li>Sergal_Head_B</li>
+					<li>Sergal_Head_C</li>
+					<li>Sergal_Head_D</li>
 				</aliencrowntypes>
 				<useGenderedHeads>true</useGenderedHeads>
 				<useGenderedBodies>false</useGenderedBodies>
