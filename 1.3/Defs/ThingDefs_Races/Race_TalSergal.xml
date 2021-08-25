@@ -177,7 +177,7 @@
 							<options>
 								<li>
 									<weight>20</weight>
-									<only>RGBA(0.85,0.85,0.85,1)</only>
+									<only>RGBA(0.50,0.25,0.10,1)</only>
 								</li>
 								<li>
 									<weight>20</weight>
@@ -188,16 +188,16 @@
 									<only>RGBA(0.4,0.4,0.4,1)</only>
 								</li>
 								<li>
-									<weight>14</weight>
-									<only>RGBA(0.65,0.51,0.52,1)</only>
+									<weight>5</weight>
+									<only>RGBA(0.30,0.75,1,1)</only>
 								</li>
 								<li>
 									<weight>14</weight>
-									<only>RGBA(0.65,0.51,0.02,1)</only>
+									<only>RGBA(0.80,0.51,0,1)</only>
 								</li>
 								<li>
 									<weight>14</weight>
-									<only>RGBA(0.96,0.80,0.79,1)</only>
+									<only>RGBA(0.28,0.40,0.50,1)</only>
 								</li>
 								<li>
 									<weight>7</weight>
@@ -205,7 +205,7 @@
 								</li>
 								<li>
 									<weight>7</weight>
-									<only>RGBA(0.96,0.96,0.96,1)</only>
+									<only>RGBA(0.45,0.28,0.08,1)</only>
 								</li>
 								<li>
 									<weight>7</weight>
@@ -213,7 +213,7 @@
 								</li>
 								<li>
 									<weight>7</weight>
-									<only>RGBA(0.65,0.5,0.7,1)</only>
+									<only>RGBA(0.65,0.5,0.4,1)</only>
 								</li>
 								<li>
 									<weight>7</weight>
