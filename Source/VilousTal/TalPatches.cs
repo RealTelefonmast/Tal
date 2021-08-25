@@ -23,7 +23,7 @@ namespace VilousTal
             public static void Postfix(ref float __result, HediffSet diffSet, List<PawnCapacityUtility.CapacityImpactor> impactors = null)
             {
                 //Get the affected pawn's PawnKindDef
-                if (diffSet.pawn.kindDef == PawnKindDef.Named("TalSergal"))
+                if (diffSet.pawn.kindDef == TalDefOf.SergalColonist)
                 {
                     //Do Race-Specific patches
                     __result *= 1.5f;
