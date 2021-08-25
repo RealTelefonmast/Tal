@@ -1,0 +1,109 @@
+﻿<Defs>
+
+  <ThingDef ParentName="WoolBase">
+    <defName>TalyxianSilk</defName>
+    <label>talyxian silk</label>
+    <description>Strands of Talyxian silk. Very thick strands of a silk-like material interlaced with with brittle bone-like plates. it provides good heat insulation.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Talxyiansilk</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <StuffPower_Insulation_Heat>25</StuffPower_Insulation_Heat>
+	  <StuffPower_Armor_Heat>2</StuffPower_Armor_Heat>
+	  <StuffPower_Armor_Sharp>0.81</StuffPower_Armor_Sharp>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <stuffProps>
+      <color>(100,127,140)</color>
+      <commonality>0.80</commonality>
+	   <statFactors>
+        <Beauty>1.4</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>VilousClay</defName>
+    <label>Vilous Clay</label>
+    <description>An unrefined clay, bonds to carbon when smelted to form a strong ceramic</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Vilousclay</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Stone_Drop</soundInteract>
+    <soundDrop>Stone_Drop</soundDrop>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>.5</Mass>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+	  <li>shigu</li>
+    </thingCategories>
+    <deepCommonality>4</deepCommonality>
+    <deepCountPerPortion>45</deepCountPerPortion>
+    <deepLumpSizeRange>20~30</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>VilousCeramic</defName>
+    <label>Vilous ceramic</label>
+    <description>Fired and refined Vilous ceramic. Shigu clans often use this material for sharp weapons.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Vilousceramic</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Stone_Drop</soundInteract>
+    <soundDrop>Stone_Drop</soundDrop>
+    <statBases>
+	  <Beauty>1</Beauty>
+      <MarketValue>2.7</MarketValue>
+      <Mass>.3</Mass>
+      <StuffPower_Armor_Sharp>1.6</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.25</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.90</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>0</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.6</SharpDamageMultiplier>
+      <BluntDamageMultiplier>.8</BluntDamageMultiplier>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <slagDef>ChunkSlagSteel</slagDef>
+    <thingCategories>
+      <li>StoneBlocks</li>
+	  <li>shigu</li>
+    </thingCategories>
+    <deepCommonality>4</deepCommonality>
+    <deepCountPerPortion>45</deepCountPerPortion>
+    <deepLumpSizeRange>20~30</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Stony</li>
+		<li>shigu</li>
+      </categories>
+      <appearance>Bricks</appearance>
+      <commonality>.75</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(175,173,157)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>2</MaxHitPoints>
+		<DoorOpenSpeed>0.45</DoorOpenSpeed>
+		<MeleeWeapon_CooldownMultiplier>.85</MeleeWeapon_CooldownMultiplier>
+        <Beauty>1</Beauty>
+        <Flammability>0</Flammability>
+      </statFactors>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+</Defs>

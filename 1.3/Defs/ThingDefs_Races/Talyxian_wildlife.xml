@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ======================= Talyxian Dog =============================== -->
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>TalyxianDog</defName>
+    <label>talyxian dog</label>
+    <description>A dog-like Talyxian organism. Commonly kept as pets by most Eltus races such as Sergals. Has minor armor and better eyesight than most dogs but lower damage potential.</description>
+    <statBases>
+      <MoveSpeed>5.2</MoveSpeed>
+	  <MeleeDodgeChance>12</MeleeDodgeChance>
+      <MarketValue>265</MarketValue>
+      <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+	  <ComfyTemperatureMax>50</ComfyTemperatureMax>
+	  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+    </statBases>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTailAndOneEye</body>
+      <petness>1</petness>
+      <baseBodySize>0.75</baseBodySize>
+      <baseHungerRate>0.4</baseHungerRate>
+      <baseHealthScale>1.0</baseHealthScale>
+      <foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
+      <leatherDef>Leather_Dog</leatherDef>
+      <gestationPeriodDays>26</gestationPeriodDays>
+      <nameOnTameChance>1</nameOnTameChance>
+      <trainability>Advanced</trainability>
+      <wildness>0</wildness>
+      <nuzzleMtbHours>12</nuzzleMtbHours>
+      <manhunterOnDamageChance>0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>12</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.25</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.5</minAge>
+          <soundWounded>Pawn_Dog_Injured</soundWounded>
+          <soundDeath>Pawn_Dog_Death</soundDeath>
+          <soundCall>Pawn_Dog_Call</soundCall>
+          <soundAngry>Pawn_Dog_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+      <li>AnimalPet</li>
+	  <li>AnimalTal</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>TalyxianDog</defName>
+    <label>talyxian dog</label>
+    <race>TalyxianDog</race>
+    <combatPower>70</combatPower>
+    <ecoSystemWeight>0.6</ecoSystemWeight>
+	
+		<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphics>
+			<li><texPath>Things/Pawn/Animal/Taldog/TalDog_A</texPath></li>
+			<li><texPath>Things/Pawn/Animal/Taldog/TalDog_B</texPath></li>
+			<li><texPath>Things/Pawn/Animal/Taldog/TalDog_C</texPath></li>
+
+		</alternateGraphics>
+		
+		
+    <lifeStages>
+      <li>
+        <label>talyxian puppy</label>
+        <labelPlural>talyxian puppies</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Taldog/TalDog_A</texPath>
+          <drawSize>0.95</drawSize>
+          <color>(220,198,160)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Taldog/Dessicated_TalDog</texPath>
+          <drawSize>0.95</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Taldog/TalDog_A</texPath>
+          <drawSize>1.35</drawSize>
+          <color>(220,198,160)</color>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Taldog/Dessicated_TalDog</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Taldog/TalDog_A</texPath>
+          <drawSize>1.6</drawSize>
+          <color>(220,198,160)</color>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Taldog/Dessicated_TalDog</texPath>
+          <drawSize>2.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+  <!-- ======================= Tal Goat =============================== -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>TalyxianGoat</defName>
+    <label>talyxian goat</label>
+    <description>A skeletal creature that grows a heat resistant silk. Has a very poor meat yield.</description>
+    <statBases>
+      <MoveSpeed>3.5</MoveSpeed>
+      <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+	  <ComfyTemperatureMax>75</ComfyTemperatureMax>
+	  <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+	   <ArmorRating_Heat>0.20</ArmorRating_Heat>
+      <MarketValue>200</MarketValue>
+	  <MeatAmount>17</MeatAmount>
+    </statBases>
+    <uiIconScale>1.2</uiIconScale>
+    <tools>
+      <li>
+          <label>Horn</label>
+        <capacities>
+          <li>Blunt</li>
+		  <li>Scratch</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.5</chanceFactor>
+	  </li>
+    </tools>
+	<comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>TalyxianSilk</woolDef>
+        <shearIntervalDays>9</shearIntervalDays>
+        <woolAmount>35</woolAmount>
+      </li>
+    </comps>
+    <race>
+      <body>QuadrupedAnimalWithHoovesAndHorn</body>
+      <baseBodySize>0.75</baseBodySize>
+      <baseHealthScale>0.7</baseHealthScale>
+      <baseHungerRate>0.45</baseHungerRate>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <leatherDef>TalyxianSilk</leatherDef>
+      <wildness>0.07</wildness>
+      <trainability>None</trainability>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0</manhunterOnDamageChance>
+      <gestationPeriodDays>17</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.7, 1)</li>
+          <li>(2.0, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>12</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.1</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.4</minAge>
+          <soundWounded>Pawn_Goat_Wounded</soundWounded>
+          <soundDeath>Pawn_Goat_Death</soundDeath>
+          <soundCall>Pawn_Goat_Call</soundCall>
+          <soundAngry>Pawn_Goat_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+      <li>AnimalFarm</li>
+	  <li>AnimalTal</li>
+    </tradeTags>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>TalyxianGoat</defName>
+    <label>talyxian goat</label>
+    <race>TalyxianGoat</race>
+    <combatPower>45</combatPower>
+    <ecoSystemWeight>0.5</ecoSystemWeight>
+	<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphics>
+			<li><texPath>Things/Pawn/Animal/Talgoat/Talgoat_A</texPath></li>
+			<li><texPath>Things/Pawn/Animal/Talgoat/Talgoat_B</texPath></li>
+
+		</alternateGraphics>
+    <lifeStages>
+      <li>
+        <label>baby talyxian goat</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Talgoat/Talgoat</texPath>
+          <drawSize>0.6</drawSize>
+          <shaderType>CutoutSkin</shaderType>
+          <shadowData>
+            <volume>(0.25, 0.25, 0.25)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Talgoat/Dessicated_Talgoat</texPath>
+          <drawSize>0.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Talgoat/Talgoat</texPath>
+          <drawSize>1.15</drawSize>
+          <shadowData>
+            <volume>(0.375, 0.375, 0.375)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Talgoat/Dessicated_Talgoat</texPath>
+          <drawSize>1.15</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Talgoat/Talgoat</texPath>
+          <drawSize>1.42</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.5, 0.5)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Talgoat/Dessicated_Talgoat</texPath>
+          <drawSize>1.42</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+    <!--========================Stalker=======================-->
+
+  <ThingDef ParentName="BigCatThingBase">
+    <defName>TalyxianStalker</defName>
+    <label>talyxian stalker</label>
+    <description>A feline-like Talyxian organism. Commonly kept as pets by most Eltus races such as Sergals. They have have high genetic diversity</description>
+    <statBases>
+      <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+	  <MoveSpeed>3.5</MoveSpeed>
+	  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+    </statBases>
+	<race>
+	<trainability>Advanced</trainability>
+	  <petness>1</petness>
+	</race>
+	 <tradeTags>
+      <li>AnimalCommon</li>
+      <li>AnimalPet</li>
+	  <li>AnimalTal</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BigCatKindBase">
+    <defName>TalyxianStalker</defName>
+    <label>talyxian stalker</label>
+    <race>TalyxianStalker</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Talstalkers/TalStalk</texPath>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Talstalkers/Dessicated_TalStalk</texPath>
+          <drawSize>1.1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Talstalkers/TalStalk</texPath>
+          <drawSize>1.4</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Talstalkers/Dessicated_TalStalk</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Talstalkers/TalStalk</texPath>
+          <drawSize>2.18</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Talstalkers/Dessicated_TalStalk</texPath>
+          <drawSize>2.18</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+ </Defs>
+ 

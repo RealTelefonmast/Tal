@@ -1,0 +1,19 @@
+To-do list for the TAL mod
+
+Not in any particualr order:
+
+Add Additonal texture masks for sergals
+Add a +2 moodlet for sergals that have ate cheese, something like: "ate cheese" "This feels strangely familiar..."
+All Wild animals and plants (NOT including Sergals, Nevreans, and Agudners) Avoid Salt and take minor burn damage if they eat or touch it
+Add Talyxian Biome: Coral and fungal style trees and plants, sand filled clearings, and more abuntant Talyxian life. all Talyxian plants are carnivorus. larger plants should attack smaller creatures by luring them in
+Add Shigu ideology style
+Add Blood beans as a crop
+Add nevreans (roll in lore differs on gender: males tend to be creative and weaker, but are able to glide for a short time. females are tougher and more rational minded but cannot glide)
+Add Agudners (behavoir is closest to humans, smartest of the 3, Once used as "technology slaves" by shigu clans)
+Add Name lists
+Add Dessicated Texture for Sergal tails
+Add a "shigu faction" that spawns more often in Talyxian Biomes
+Add Talyxian Wolves, Snail Cows (caravan animal), Snail Rabbits, Running Snails(caravan animal), Urchin Cows (caravan animal), Mouse Mites, Vampire Leeches, Moutain Leeches, etc
+Add Sergal canon/fanon size option in mod options
+Balance Sergal Stats
+Add a handfull of sergal hair styles, commonly not used. 

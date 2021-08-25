@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PawnKindDef Abstract="True" Name="BaseTalSergalPawnKind">
+		<race>TalSergal</race>
+		<combatPower>26</combatPower>
+		<baseRecruitDifficulty>0.01</baseRecruitDifficulty>
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+		<forceNormalGearQuality>false</forceNormalGearQuality>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="BaseTalSergalPawnKind">
+		<defName>TalSergalPlayerColonist</defName>
+		<label>colonist</label>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+
+		<apparelTags>
+			<li>IndustrialBasic</li>
+		</apparelTags>
+		<initialWillRange>20~30</initialWillRange>
+		<initialResistanceRange>17~27</initialResistanceRange>
+		<apparelMoney>
+		<min>300</min>
+		<max>550</max>
+		</apparelMoney>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+	</PawnKindDef>
+
+</Defs>
