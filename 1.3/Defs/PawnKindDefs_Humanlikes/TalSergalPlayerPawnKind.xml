@@ -11,7 +11,7 @@
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="BaseTalSergalPawnKind">
-		<defName>TalSergalPlayerColonist</defName>
+		<defName>SergalColonist</defName>
 		<label>colonist</label>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 
