@@ -82,7 +82,7 @@
       <makesFootprints>true</makesFootprints>
       <lifeExpectancy>80</lifeExpectancy>
 	  <leatherDef>Leather_Human</leatherDef>
-      <useMeatFrom>Human</useMeatFrom>
+	  <meatColor>(81,21,28)</meatColor>
       <nameCategory>HumanStandard</nameCategory>
       <body>TalSergal</body>
       <baseBodySize>1</baseBodySize>
