@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HairDef>
+    <defName>Kitehair</defName>
+    <label>Kitehair</label>
+    <hairGender>Any</hairGender>
+    <texPath>TalSergal/Hair/Kite</texPath>
+    <hairTags>
+      <li>Sergalhair</li>
+    </hairTags>
+  </HairDef>
+   <HairDef>
+    <defName>Nohair</defName>
+    <label>Nohair</label>
+    <hairGender>Any</hairGender>
+    <texPath>TalSergal/Hair/Empty</texPath>
+    <hairTags>
+      <li>Sergalhair</li>
+    </hairTags>
+  </HairDef>
+</Defs>
