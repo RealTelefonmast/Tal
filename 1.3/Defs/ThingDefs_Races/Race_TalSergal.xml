@@ -167,7 +167,7 @@
 			<alienPartGenerator>
 				<customPortraitHeadDrawSize>(0.9, 0.9)</customPortraitHeadDrawSize>
 				<customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize>
-				<headOffset>(0, 0.1)</headOffset>
+				<headOffset>(-0.05, 0.1)</headOffset>
 				<borderScale>2</borderScale>
 				<atlasScale>2</atlasScale>
 				<colorChannels>
