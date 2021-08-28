@@ -5,7 +5,7 @@
     <label>talyxian silk</label>
     <description>Strands of Talyxian silk. Very thick strands of a silk-like material interlaced with with brittle bone-like plates. it provides good heat insulation.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Talxyiansilk</texPath>
+      <texPath>Things/Item/Resource/Talyxiansilk</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <statBases>
