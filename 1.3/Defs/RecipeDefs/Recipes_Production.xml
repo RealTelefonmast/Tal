@@ -1,44 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <RecipeDef>
-    <defName>MakeVilousCeramic</defName>
-    <label>Make Vilous Ceramic</label>
-    <description>Use heat to fuse carbon to Vilous clay to make ceramic.</description>
-    <jobString>Baking Vilous Clay.</jobString>
-    <workAmount>1700</workAmount>
-    <workSpeedStat>SmeltingSpeed</workSpeedStat>
-    <effectWorking>Smelt</effectWorking>
-    <soundWorking>Recipe_Smelt</soundWorking>
-	 <recipeUsers>
-      <li>ElectricSmelter</li>
-    </recipeUsers>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>VilousClay</li>
-          </thingDefs>
-        </filter>
-        <count>30</count>
-      </li>
-	   <li>
-        <filter>
-          <thingDefs>
-            <li>MedicineHerbal</li>
-          </thingDefs>
-        </filter>
-        <count>3</count>
-      </li>
-    </ingredients>
-    <products>
-      <VilousCeramic>30</VilousCeramic>
-    </products>
-    <fixedIngredientFilter>
-      <thingDefs>
-       <li>VilousClay</li>
-	   <li>MedicineHerbal</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-  </RecipeDef>
+	<RecipeDef>
+		<defName>MakeVilousCeramic</defName>
+		<label>Make Vilous Ceramic</label>
+		<description>Use heat to fuse carbon to Vilous clay to make ceramic.</description>
+		<jobString>Baking Vilous Clay.</jobString>
+		<workAmount>1700</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<recipeUsers>
+			<li>ElectricSmelter</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VilousClay</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantMatter</li>
+					</categories>
+					<thingDefs>
+						<li>Hay</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<products>
+			<VilousCeramic>30</VilousCeramic>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>VilousClay</li>
+				<li>Hay</li>
+			</thingDefs>
+			<categories>
+				<li>PlantMatter</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
 </Defs>

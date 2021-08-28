@@ -14,15 +14,14 @@
 		<defName>SergalColonist</defName>
 		<label>colonist</label>
 		<defaultFactionType>PlayerColony</defaultFactionType>
-
 		<apparelTags>
 			<li>IndustrialBasic</li>
 		</apparelTags>
 		<initialWillRange>20~30</initialWillRange>
 		<initialResistanceRange>17~27</initialResistanceRange>
 		<apparelMoney>
-		<min>300</min>
-		<max>550</max>
+			<min>0</min>
+			<max>0</max>
 		</apparelMoney>
 		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
 	</PawnKindDef>

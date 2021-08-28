@@ -1,21 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <HairDef>
-    <defName>Kitehair</defName>
-    <label>Kitehair</label>
-    <hairGender>Any</hairGender>
-    <texPath>TalSergal/Hair/Kite</texPath>
-    <hairTags>
-      <li>Sergalhair</li>
-    </hairTags>
-  </HairDef>
-   <HairDef>
-    <defName>Nohair</defName>
-    <label>Nohair</label>
-    <hairGender>Any</hairGender>
-    <texPath>TalSergal/Hair/Empty</texPath>
-    <hairTags>
-      <li>Sergalhair</li>
-    </hairTags>
-  </HairDef>
+
+	<StyleItemCategoryDef>
+		<defName>SergalHair</defName>
+		<label>sergal hair</label>
+	</StyleItemCategoryDef>
+
+	<HairDef>
+		<defName>TopmaneHair</defName>
+		<label>Topmane</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Topmane</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+
+	<HairDef>
+		<defName>DiamondHair</defName>
+		<label>Diamond</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Diamond</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+
+	<HairDef>
+		<defName>Kitehair</defName>
+		<label>Kite</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Kite</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nohair</defName>
+		<label>Nohair</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Empty</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+
 </Defs>
