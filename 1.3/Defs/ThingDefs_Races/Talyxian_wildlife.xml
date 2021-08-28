@@ -319,26 +319,27 @@
   </PawnKindDef>
     <!--========================Stalker=======================-->
 
-  <ThingDef ParentName="BigCatThingBase">
-    <defName>TalyxianStalker</defName>
-    <label>talyxian stalker</label>
-    <description>A feline-like Talyxian organism. Commonly kept as pets by most Eltus races such as Sergals. They have have high genetic diversity</description>
-    <statBases>
-      <ComfyTemperatureMin>-25</ComfyTemperatureMin>
-	  <MoveSpeed>3.5</MoveSpeed>
-	  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
-    </statBases>
-	<race>
-	<trainability>Advanced</trainability>
-	  <petness>1</petness>
-	</race>
-	 <tradeTags>
-      <li>AnimalCommon</li>
-      <li>AnimalPet</li>
-	  <li>AnimalTal</li>
-    </tradeTags>
-  </ThingDef>
+	<ThingDef ParentName="BigCatThingBase">
+		<defName>TalyxianStalker</defName>
+		<label>talyxian stalker</label>
+		<description>A feline-like Talyxian organism. Commonly kept as pets by most Eltus races such as Sergals. They have have high genetic diversity</description>
+		<statBases>
+			<ComfyTemperatureMin>-25</ComfyTemperatureMin>
+			<MoveSpeed>3.5</MoveSpeed>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+		</statBases>
+		<race>
+			<leatherDef>Leather_TalStalker</leatherDef>
+			<trainability>Advanced</trainability>
+			<petness>1</petness>
+		</race>
+		<tradeTags>
+			<li>AnimalCommon</li>
+			<li>AnimalPet</li>
+			<li>AnimalTal</li>
+		</tradeTags>
+	</ThingDef>
 
   <PawnKindDef ParentName="BigCatKindBase">
     <defName>TalyxianStalker</defName>
