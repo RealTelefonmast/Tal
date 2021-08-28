@@ -236,7 +236,7 @@
 							<options>
 								<li>
 									<weight>1</weight>
-									<only>RGBA(1,1,1,0)</only>
+									<only>RGBA(1,1,1,1)</only>
 								</li>
 							</options>
 						</first>
@@ -298,10 +298,10 @@
 			<li>
 				<key>HairDef</key>
 				<value>
-				<hasStyle>true</hasStyle>
-				<styleTagsOverride>
-				  <li>Sergalhair</li>
-				</styleTagsOverride>
+					<hasStyle>true</hasStyle>
+					<styleTagsOverride>
+						<li>Sergalhair</li>
+					</styleTagsOverride>
 				</value>
 			</li>
 			<li>
@@ -314,7 +314,7 @@
 			<li>
 				<key>TattooDef</key>
 				<value>
-					<hasStyle>true</hasStyle>
+					<hasStyle>false</hasStyle>
 				</value>
 			</li>
 		</styleSettings>

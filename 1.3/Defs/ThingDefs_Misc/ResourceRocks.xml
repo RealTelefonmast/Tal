@@ -1,27 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef ParentName="RockBase">
-    <defName>VilousClayOre</defName>
-    <label>vilous clay deposit</label>
-    <description>A deposit of vilous clay.</description>
-    <graphicData>
-      <texPath>Things/Object/Vilousclayore</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <statBases>
-      <Beauty>-2</Beauty>
-      <MaxHitPoints>750</MaxHitPoints>
-    </statBases>
-    <building>
-      <isResourceRock>true</isResourceRock>
-      <mineableThing>VilousClay</mineableThing>
-      <mineableYield>35</mineableYield>
-      <mineableScatterCommonality>0.16</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>
-        <min>8</min>
-        <max>20</max>
-      </mineableScatterLumpSizeRange>
-    </building>
-  </ThingDef>
+
+	<ThingDef ParentName="RockBase">
+		<defName>VilousClayOre</defName>
+		<label>vilous clay deposit</label>
+		<description>A deposit of vilous clay.</description>
+		<graphicData>
+			<texPath>Things/Object/Vilousclayore</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Beauty>-2</Beauty>
+			<MaxHitPoints>750</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>VilousClay</mineableThing>
+			<mineableYield>35</mineableYield>
+			<mineableScatterCommonality>0.16</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>
+				<min>8</min>
+				<max>20</max>
+			</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+	
 </Defs>
