@@ -18,6 +18,39 @@
 	</HairDef>
 
 	<HairDef>
+		<defName>Eyemark</defName>
+		<label>Eyemark</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Eyemark</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Cheekmark</defName>
+		<label>Cheekmark</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Cheekmark</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+
+<HairDef>
+		<defName>Maxim</defName>
+		<label>Maxim</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Maxim</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
 		<defName>DiamondHair</defName>
 		<label>Diamond</label>
 		<styleGender>Any</styleGender>
