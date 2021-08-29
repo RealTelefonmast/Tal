@@ -27,6 +27,17 @@
 			<li>Sergalhair</li>
 		</styleTags>
 	</HairDef>
+	
+	<HairDef>
+		<defName>SergalBraids</defName>
+		<label>Braids</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Braids</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
 
 	<HairDef>
 		<defName>Kitehair</defName>
