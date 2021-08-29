@@ -244,6 +244,7 @@
 				</colorChannels>
 				<alienbodytypes>
 					<li>Male</li>
+					<li>Thin</li>
 				</alienbodytypes>
 				<aliencrowntypes>
 					<li>Sergal_Head</li>
@@ -269,18 +270,21 @@
 								<layerOffset>-0.3</layerOffset>
 								<bodyTypes>
 									<Male>(-0.42,0.55)</Male>
+									<Thin>(-0.42,0.55)</Thin>
 								</bodyTypes>
 							</south>
 							<north>
 								<layerOffset>0.3</layerOffset>
 								<bodyTypes>
 									<Male>(0,0.55)</Male>
+									<Thin>(0,0.55)</Thin>
 								</bodyTypes>
 							</north>
 							<east>
 								<layerOffset>-0.3</layerOffset>
 								<bodyTypes>
 									<Male>(-0.42,0.25)</Male>
+									<Thin>(-0.42,0.25)</Thin>
 								</bodyTypes>
 							</east>
 						</offsets>
