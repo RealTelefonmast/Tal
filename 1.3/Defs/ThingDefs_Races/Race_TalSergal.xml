@@ -235,8 +235,32 @@
 						<first Class="ColorGenerator_Options">
 							<options>
 								<li>
-									<weight>1</weight>
+									<weight>2</weight>
 									<only>RGBA(1,1,1,1)</only>
+								</li>
+								<li>
+									<weight>1</weight>
+									<only>RGBA(1,0.55,0,1)</only>
+								</li>
+								<li>
+									<weight>1</weight>
+									<only>RGBA(0,1,0.6,1)</only>
+								</li>
+								<li>
+									<weight>1</weight>
+									<only>RGBA(1,0.7,0,1)</only>
+								</li>
+								<li>
+									<weight>1</weight>
+									<only>RGBA(1,0,0,1)</only>
+								</li>
+								<li>
+									<weight>1</weight>
+									<only>RGBA(0,0,1,1)</only>
+								</li>
+								<li>
+									<weight>1</weight>
+									<only>RGBA(0.25,0.25,0.25,1)</only>
 								</li>
 							</options>
 						</first>
