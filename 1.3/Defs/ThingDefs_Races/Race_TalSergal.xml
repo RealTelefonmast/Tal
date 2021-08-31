@@ -8,9 +8,11 @@
     <statBases>
       <MarketValue>1750</MarketValue>
       <MoveSpeed>7.7</MoveSpeed>
-	  <HungerRateMultiplier>1.5</HungerRateMultiplier>
-	  <ShootingAccuracyPawn>10</ShootingAccuracyPawn>
-	  <MeleeDodgeChance>20</MeleeDodgeChance>
+	  <MeleeWeapon_CooldownMultiplier>1.2</MeleeWeapon_CooldownMultiplier>
+	  <researchSpeedFactor>0.8</researchSpeedFactor>
+	  <HungerRateMultiplier>1.2</HungerRateMultiplier>
+	  <ShootingAccuracyPawn>-2</ShootingAccuracyPawn>
+	  <MeleeDodgeChance>15</MeleeDodgeChance>
       <ComfyTemperatureMin>5</ComfyTemperatureMin>
       <ComfyTemperatureMax>32</ComfyTemperatureMax>
       <LeatherAmount>85</LeatherAmount>
