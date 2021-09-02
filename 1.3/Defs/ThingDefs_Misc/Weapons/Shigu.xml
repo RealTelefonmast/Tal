@@ -3,8 +3,8 @@
 
   <!-- ================================= Industrial ==================================== -->
   <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_ShiguPistol</defName>
-    <label>Shigu pistol bullet</label>
+    <defName>Bullet_LShiguPistol</defName>
+    <label>Light Shigu pistol bullet</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -12,20 +12,35 @@
     <projectile>
       <damageDef>Bullet</damageDef>
       <damageAmountBase>8</damageAmountBase>
-      <stoppingPower>.8</stoppingPower>
+      <stoppingPower>0.8</stoppingPower>
       <speed>58</speed>
     </projectile>
   </ThingDef>
   
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_HShiguPistol</defName>
+    <label>Heavy Shigu pistol bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <stoppingPower>1.2</stoppingPower>
+      <speed>53</speed>
+    </projectile>
+  </ThingDef>
+  
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_ShiguPistol</defName>
-    <label>Shigu Pistol</label>
-    <description>A Shigu style pistol. made out of metal and ceramic, and outfitted with a simple bayonett. One of the few firearms created by Eltus folks.</description>
+    <defName>Gun_ShiguAutoPistol</defName>
+    <label>Shigu Auto Pistol</label>
+    <description>A light Shigu style pistol. made out of metal and ceramic, and outfitted with a simple bayonett. One of the few firearms created by Eltus folks.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/ShiguPistol</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <uiIconScale>1.4</uiIconScale>
+    <uiIconScale>1</uiIconScale>
     <soundInteract>Interact_Revolver</soundInteract>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
@@ -59,8 +74,79 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_ShiguPistol</defaultProjectile>
+        <defaultProjectile>Bullet_LShiguPistol</defaultProjectile>
         <warmupTime>0.3</warmupTime>
+        <range>22.9</range>
+        <soundCast>Shot_Revolver</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>bayonett</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Poke</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>1.35</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+    <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_ShiguHeavyPistol</defName>
+    <label>Shigu Heavy Pistol</label>
+    <description>A light Shigu style pistol. made out of metal and ceramic, and outfitted with a simple bayonett. One of the few firearms created by Eltus folks.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/ShiguBorchardt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <soundInteract>Interact_Revolver</soundInteract>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>4200</WorkToMake>
+      <Mass>1.4</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.35</AccuracyMedium>
+      <AccuracyLong>0.25</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>SimpleGun</li>
+      <li>ShiguRare</li>
+	  <li>Shigu</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedLight</li>
+    </weaponClasses>
+    <costList>
+      <Steel>35</Steel>
+	  <VilousCeramic>50</VilousCeramic>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_HShiguPistol</defaultProjectile>
+        <warmupTime>0.7</warmupTime>
         <range>25.9</range>
         <soundCast>Shot_Revolver</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
