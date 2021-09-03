@@ -41,7 +41,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <uiIconScale>1</uiIconScale>
-    <soundInteract>Interact_Revolver</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
       <WorkToMake>4000</WorkToMake>
@@ -66,6 +66,7 @@
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <recipeMaker>
+	<researchPrerequisite>BlowbackOperation</researchPrerequisite>
       <skillRequirements>
         <Crafting>5</Crafting>
       </skillRequirements>
@@ -77,7 +78,7 @@
         <defaultProjectile>Bullet_LShiguPistol</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>22.9</range>
-        <soundCast>Shot_Revolver</soundCast>
+        <soundCast>Shot_Autopistol</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -106,7 +107,7 @@
     <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_ShiguHeavyPistol</defName>
     <label>Shigu Heavy Pistol</label>
-    <description>A light Shigu style pistol. made out of metal and ceramic, and outfitted with a simple bayonett. One of the few firearms created by Eltus folks.</description>
+    <description>A Heavy Shigu style pistol. made out of metal and ceramic, and outfitted with a simple bayonett. One of the few firearms created by Eltus folks.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/ShiguBorchardt</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -137,6 +138,7 @@
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <recipeMaker>
+	<researchPrerequisite>BlowbackOperation</researchPrerequisite>
       <skillRequirements>
         <Crafting>5</Crafting>
       </skillRequirements>
@@ -172,6 +174,85 @@
         <cooldownTime>1.35</cooldownTime>
       </li>
     </tools>
+	
+  </ThingDef>
+    <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_ShiguRifle</defName>
+    <label>shigu rifle</label>
+    <description>A Shigu style rifle. made out of metal and ceramic, and outfitted with a simple bayonett. One of the few firearms created by Eltus folks.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/ShiguRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <weaponClasses>
+      <li>LongShots</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.80</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+	  <VilousCeramic>70</VilousCeramic>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+	<researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ShiguRifle</defaultProjectile>
+        <warmupTime>1.7</warmupTime>
+        <range>30.9</range>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+		<li>
+        <label>bayonett</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Stab</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>1.2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ShiguRifle</defName>
+    <label>Shigu rifle bullet</label>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>64</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
   </ThingDef>
   
   <ThingDef ParentName="BaseWeaponNeolithic">
@@ -225,7 +306,7 @@
           <li>Cut</li>
         </capacities>
         <power>12</power>
-        <cooldownTime>2.5</cooldownTime>
+        <cooldownTime>1.5</cooldownTime>
       </li>
     </tools>
     <recipeMaker>
@@ -248,7 +329,7 @@
     <projectile>
       <damageDef>Arrow</damageDef>
       <damageAmountBase>15</damageAmountBase>
-      <stoppingPower>1.5</stoppingPower>
+      <stoppingPower>1.7</stoppingPower>
       <armorPenetrationBase>0.15</armorPenetrationBase>
       <speed>49</speed>
     </projectile>
