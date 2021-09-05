@@ -32,6 +32,7 @@ namespace VilousTal
 
         public SergCapacityOffset GetCapModFor(PawnCapacityDef capacity)
         {
+            if (capacityOffsets.NullOrEmpty()) return null;
             return capacityOffsets.Find(c => c.capacity == capacity);
         }
     }

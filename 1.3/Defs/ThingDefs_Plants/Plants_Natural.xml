@@ -4,7 +4,7 @@
 	<ThingDef ParentName="PlantBase">
 		<defName>TalMozuuk</defName>
 		<label>mozuuk</label>
-		<description>Mozuuk has a similar appearance to both common grass and Earth seaweeds like cladosiphon okamuranus, and purple tones as common Talyxian plants that have no chlorophyll. It is classified as a Talyxian species of plant, but is harmless to Eltus people. </description>
+		<description>Mozuuk has a similar appearance to both common grass and Earth seaweeds like cladosiphon okamuranus, and purple tones as common Talyxian plants that have no chlorophyll. It is classified as a Talyxian species of plant, but is harmless to Eltus people.</description>
 		<statBases>
 			<MaxHitPoints>85</MaxHitPoints>
 			<Nutrition>0.175</Nutrition>
@@ -33,17 +33,19 @@
 			<humanFoodPlant>true</humanFoodPlant>
 			<!---->
 			<wildBiomes>
-				<Desert>0.5</Desert>
+				<Desert>25</Desert>
+				<TemperateForest>0.25</TemperateForest>
+				<AridShrubland>2</AridShrubland>
 			</wildBiomes>
 			<wildClusterRadius>4</wildClusterRadius>
-			<wildClusterWeight>165</wildClusterWeight>
-			<wildOrder>1</wildOrder>
+			<wildClusterWeight>200</wildClusterWeight>
+			<wildOrder>2</wildOrder>
 			
 			<!-- Mozuuk is very resilient-->
 			<harvestWork>65</harvestWork>
 			<dieFromToxicFallout>false</dieFromToxicFallout>
 			<dieIfNoSunlight>false</dieIfNoSunlight>
-			<fertilityMin>0.2</fertilityMin>
+			<fertilityMin>0.1</fertilityMin>
 			<fertilitySensitivity>0.05</fertilitySensitivity>
 			<topWindExposure>0.02</topWindExposure>
 		</plant>
