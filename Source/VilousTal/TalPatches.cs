@@ -17,16 +17,46 @@ namespace VilousTal
 
         }
 
-        [HarmonyPatch(typeof(PawnCapacityWorker_Manipulation), "CalculateCapacityLevel")]
-        public static class CalculateCapacityLevel_Patch
+        [HarmonyPatch(typeof(Pawn), "BodySize", MethodType.Getter)]
+        public static class PawnBodySizePatch
         {
-            public static void Postfix(ref float __result, HediffSet diffSet, List<PawnCapacityUtility.CapacityImpactor> impactors = null)
+            public static void Postfix(ref float __result, Pawn __instance)
             {
                 //Get the affected pawn's PawnKindDef
-                if (diffSet.pawn.kindDef == TalDefOf.SergalColonist)
+                if (__instance?.kindDef == TalDefOf.SergalColonist)
                 {
-                    //Do Race-Specific patches
-                    __result *= 1.5f;
+                    __result *= TalConfigDef.Def.sergProps.GetSizeUsed;
+                }
+            }
+        }
+
+        [HarmonyPatch(typeof(PawnCapacityUtility), "CalculateCapacityLevel")]
+        public static class PawnCapacityUtilityCalculateCapacityLevelPatch
+        {
+            public static void Postfix(ref float __result, HediffSet diffSet, PawnCapacityDef capacity)
+            {
+                //Get the affected pawn's PawnKindDef
+                var pawn = diffSet.pawn;
+                if (pawn?.kindDef == TalDefOf.SergalColonist)
+                {
+                    var capOffset = TalConfigDef.Def.sergProps.GetCapModFor(capacity);
+                    if (capOffset != null)
+                    {
+                        __result += capOffset.offset;
+                    }
+                }
+            }
+        }
+
+        [HarmonyPatch(typeof(VerbProperties), "AdjustedCooldown", new []{typeof(Tool), typeof(Pawn), typeof(Thing)})]
+        public static class VerbPropertiesAdjustedCooldownPatch
+        {
+            public static void Postfix(ref float __result, Tool tool, Pawn attacker, Thing equipment)
+            {
+                //Get the affected pawn's PawnKindDef
+                if (attacker?.kindDef == TalDefOf.SergalColonist)
+                {
+                    __result *= TalConfigDef.Def.sergProps.meleeCDMultiplier;
                 }
             }
         }
