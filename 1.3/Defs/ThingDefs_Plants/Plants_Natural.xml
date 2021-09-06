@@ -12,7 +12,7 @@
 		<graphicData>
 			<texPath>Things/Plants/Mozuuk</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
-			<shaderType>Transparent</shaderType>
+			<shaderType>TransparentPlant</shaderType>
 		</graphicData>
 		<selectable>true</selectable>
 		<pathCost>14</pathCost>
