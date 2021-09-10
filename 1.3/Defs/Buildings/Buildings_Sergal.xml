@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="WallBase_Tal">
+		<defName>Aquaplanter</defName>
+		<label>aquaplanter</label>
+		<description>Makes the water plants grow.</description>
+		<designationCategory>Production</designationCategory>
+		<graphicData>
+			<texPath>Things/Building/Aquaplanter/Aquaplanter_Atlas</texPath>
+		</graphicData>
+		<costList>
+			<VilousCeramic>5</VilousCeramic>
+		</costList>
+		<uiIconPath>Things/Building/Aquaplanter/Aquaplanter_Icon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>750</WorkToBuild>
+			<Flammability>0</Flammability>
+		</statBases>
+	</ThingDef>
+
+</Defs>
