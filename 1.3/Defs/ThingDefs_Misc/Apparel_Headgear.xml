@@ -9,7 +9,7 @@
 			<researchPrerequisite>ComplexClothing</researchPrerequisite>
 		</recipeMaker>
 		<graphicData>
-			<texPath>Things/Apparel/TalFarmerhat_east</texPath>
+			<texPath>Things/Apparel/TalFarmerHat/TalFarmerHat</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(0.9, 0.9)</drawSize>
 		</graphicData>
@@ -35,7 +35,7 @@
 			<bodyPartGroups>
 				<li>UpperHead</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Apparel/TalFarmerhat</wornGraphicPath>
+			<wornGraphicPath>Things/Apparel/TalFarmerHat/TalFarmerHat</wornGraphicPath>
 			<layers>
 				<li>Overhead</li>
 			</layers>

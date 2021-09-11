@@ -73,9 +73,8 @@
     </statBases>
     <useHitPoints>false</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <slagDef>ChunkSlagSteel</slagDef>
     <thingCategories>
-      <li>StoneBlocks</li>
+      <li>Metallic</li>
 	  <li>shigu</li>
     </thingCategories>
     <deepCommonality>4</deepCommonality>
@@ -85,7 +84,7 @@
     <smeltable>false</smeltable>
     <stuffProps>
       <categories>
-        <li>Stony</li>
+        <li>Metallic</li>
 		<li>shigu</li>
       </categories>
       <appearance>Bricks</appearance>
