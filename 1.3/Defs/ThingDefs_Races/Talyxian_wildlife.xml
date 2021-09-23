@@ -241,10 +241,10 @@
         <li>
           <def>AnimalAdult</def>
           <minAge>0.4</minAge>
-          <soundWounded>Pawn_Goat_Wounded</soundWounded>
-          <soundDeath>Pawn_Goat_Death</soundDeath>
-          <soundCall>Pawn_Goat_Call</soundCall>
-          <soundAngry>Pawn_Goat_Angry</soundAngry>
+          <soundWounded>Pawn_TalGoat_Wounded</soundWounded>
+          <soundDeath>Pawn_TalGoat_Death</soundDeath>
+          <soundCall>Pawn_TalGoat_Call</soundCall>
+          <soundAngry>Pawn_TalGoat_Angry</soundAngry>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
