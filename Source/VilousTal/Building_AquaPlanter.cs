@@ -8,80 +8,142 @@ using Verse;
 
 namespace VilousTal
 {
+    public class AquaPlanterSet
+    {
+        private const int valuePerPart = 100;
+
+        private float internalValue = 0;
+        private List<Building_AquaPlanter> parts;
+
+        public List<Building_AquaPlanter> AllParts => parts;
+
+        public int TotalCapacity => parts.Count * valuePerPart;
+        public float TotalStored => internalValue;
+        public float CurrentLevel => internalValue / TotalCapacity;
+
+        private void AddPart(Building_AquaPlanter part)
+        {
+            parts ??= new List<Building_AquaPlanter>();
+            parts.Add(part);
+        }
+
+
+        public void Notify_AddWater(float amount)
+        {
+            internalValue = Mathf.Clamp(internalValue + amount, 0, TotalCapacity);
+        }
+
+        public static AquaPlanterSet Regenerate(Thing root)
+        {
+            AquaPlanterSet newSet = new AquaPlanterSet();
+            HashSet<AquaPlanterSet> oldSets = new HashSet<AquaPlanterSet>();
+
+            HashSet<Thing> closedSet = new HashSet<Thing>();
+            HashSet<Thing> openSet = new HashSet<Thing>() { root };
+            HashSet<Thing> currentSet = new HashSet<Thing>();
+            while (openSet.Count > 0)
+            {
+                foreach (var thing in openSet)
+                {
+                    if (thing is Building_AquaPlanter planter)
+                    {
+                        if (planter.AquaPlanterSet != null)
+                        {
+                            oldSets.Add(planter.AquaPlanterSet);
+                        }
+                        planter.AquaPlanterSet = newSet;
+                        newSet.AddPart(planter);
+                        closedSet.Add(planter);
+                    }
+                }
+
+                //
+                (currentSet, openSet) = (openSet, currentSet);
+
+                openSet.Clear();
+                foreach (var thing in currentSet)
+                {
+                    foreach (var c in GenAdjFast.AdjacentCellsCardinal(thing))
+                    {
+                        Thing ofDef = c.GetFirstThing(root.Map, root.def);
+                        if (ofDef != null && !closedSet.Contains(ofDef))
+                        {
+                            openSet.Add(ofDef);
+                        }
+                    }
+                }
+            }
+
+            foreach (var aquaPlanterSet in oldSets)
+            {
+                newSet.Notify_AddWater(aquaPlanterSet.TotalStored);
+            }
+
+            return newSet;
+        }
+    }
+
     public class Building_AquaPlanter : Building_VT
     {
-        private float internalWater = 0;
-        private float maxWaterValue = 100;
+        private AquaPlanterSet assignedSet;
 
-        public float WaterLevel => internalWater/maxWaterValue;
+        public AquaPlanterSet AquaPlanterSet
+        {
+            get => assignedSet;
+            set => assignedSet = value;
+        }
+
+        public float WaterLevel => assignedSet.CurrentLevel;
+
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            this.AquaPlanterSet = AquaPlanterSet.Regenerate(this);
+            UpdateGraphic();
+        }
+
+        private void UpdateGraphic()
+        {
+            AquaPlanterSet.AllParts.ForEach(t =>
+            {
+                t.extraGraphicInt = ExtraGraphic.GetColoredVersion(ExtraGraphic.Shader, new Color(1, 1, 1, WaterLevel), Color.white);
+                Map.mapDrawer.MapMeshDirty(t.Position, MapMeshFlag.Terrain);
+                Map.mapDrawer.MapMeshDirty(t.Position, MapMeshFlag.Buildings);
+                Map.mapDrawer.MapMeshDirty(t.Position, MapMeshFlag.Things);
+            });
+        }
 
         private void Notify_AddedWater(float amount)
         {
-            internalWater = Mathf.Clamp(internalWater + amount, 0, maxWaterValue);
-
-            extraGraphicInt = ExtraGraphic.GetColoredVersion(ExtraGraphic.Shader, new Color(1, 1, 1, WaterLevel), Color.white);
-
-            Map.mapDrawer.MapMeshDirty(Position, MapMeshFlag.Buildings);
+            AquaPlanterSet.Notify_AddWater(amount);
+            UpdateGraphic();
         }
 
         //public VTGraphic_Linked graphInt;
-        private Graphic_Linked WaterGraphic => ExtraGraphic as Graphic_Linked;//graphInt??= new VTGraphic_Linked((ExtraGraphic as Graphic_Linked).subGraphic);
+        private VTGraphic_Linked WaterGraphic => ExtraGraphic as VTGraphic_Linked;//graphInt??= new VTGraphic_Linked((ExtraGraphic as Graphic_Linked).subGraphic);
+
+        public override void Draw()
+        {
+            if(debug_ShowSet)
+                GenDraw.DrawFieldEdges(AquaPlanterSet.AllParts.Select(t => t.Position).ToList(), Color.cyan);
+        }
 
         public override void Print(SectionLayer layer)
         {
             base.Print(layer);
-
-            PrintOverlay(layer);
-        }
-
-        private void PrintOverlay(SectionLayer layer)
-        {
-            IntVec3 position = Position;
-            for (int i = 0; i < 4; i++)
-            {
-                IntVec3 intVec = Position + GenAdj.DiagonalDirectionsAround[i];
-                var thisG = WaterGraphic;
-                if (thisG.ShouldLinkWith(intVec, this) && 
-                    (i != 0 || (thisG.ShouldLinkWith(position + IntVec3.West, this) && thisG.ShouldLinkWith(position + IntVec3.South, this))) && 
-                    (i != 1 || (thisG.ShouldLinkWith(position + IntVec3.West, this) && thisG.ShouldLinkWith(position + IntVec3.North, this))) && 
-                    (i != 2 || (thisG.ShouldLinkWith(position + IntVec3.East, this) && thisG.ShouldLinkWith(position + IntVec3.North, this))) && 
-                    (i != 3 || (thisG.ShouldLinkWith(position + IntVec3.East, this) && thisG.ShouldLinkWith(position + IntVec3.South, this))))
-                {
-                    Vector3 center = this.DrawPos + Altitudes.AltIncVect + GenAdj.DiagonalDirectionsAround[i].ToVector3().normalized * Graphic_LinkedCornerFiller.CoverOffsetDist + Altitudes.AltIncVect + new Vector3(0f, 0f, 0.09f);
-                    Vector2 size = new Vector2(0.5f, 0.5f);
-                    if (!intVec.InBounds(Map))
-                    {
-                        if (intVec.x == -1)
-                        {
-                            center.x -= 1f;
-                            size.x *= 5f;
-                        }
-                        if (intVec.z == -1)
-                        {
-                            center.z -= 1f;
-                            size.y *= 5f;
-                        }
-                        if (intVec.x == Map.Size.x)
-                        {
-                            center.x += 1f;
-                            size.x *= 5f;
-                        }
-                        if (intVec.z == Map.Size.z)
-                        {
-                            center.z += 1f;
-                            size.y *= 5f;
-                        }
-                    }
-                    Printer_Plane.PrintPlane(layer, center, size, thisG.LinkedDrawMatFrom(this, Position), 0, false, Graphic_LinkedCornerFiller.CornerFillUVs, null, 0.01f, 0f);
-                }
-            }
+            WaterGraphic.Print(layer, this, 0, AltitudeLayer.BuildingOnTop, debug_DrawExtra);
         }
 
         public override string GetInspectString()
         {
-            return $"Water Level: {WaterLevel.ToStringPercent()}";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Water Level: {WaterLevel.ToStringPercent()}");
+            sb.AppendLine($"Connected Parts: {AquaPlanterSet.AllParts.Count}");
+            return sb.ToString().TrimEndNewlines();
         }
 
+        private bool debug_ShowSet;
+        private bool debug_DrawExtra = true;
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (var gizmo in base.GetGizmos())
@@ -94,12 +156,29 @@ namespace VilousTal
                 yield return new Command_Action()
                 {
                     defaultLabel = "Fill Water",
-                    action = delegate { Notify_AddedWater(25f); }
+                    action = delegate { Notify_AddedWater(100f); }
                 };
                 yield return new Command_Action()
                 {
                     defaultLabel = "Remove Water",
-                    action = delegate { Notify_AddedWater(-25f); }
+                    action = delegate { Notify_AddedWater(-100f); }
+                };
+                yield return new Command_Action()
+                {
+                    defaultLabel = "Show Set",
+                    action = delegate
+                    {
+                        debug_ShowSet = !debug_ShowSet;
+                    }
+                };
+                yield return new Command_Action()
+                {
+                    defaultLabel = "Switch Extra",
+                    action = delegate
+                    {
+                        debug_DrawExtra = !debug_DrawExtra;
+                        UpdateGraphic();
+                    }
                 };
             }
         }
