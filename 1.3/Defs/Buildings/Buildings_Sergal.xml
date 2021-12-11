@@ -1,14 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="WallBase_Tal">
+	<VilousTal.VTThingDef ParentName="WallBase_Tal">
 		<defName>Aquaplanter</defName>
 		<label>aquaplanter</label>
 		<description>Makes the water plants grow.</description>
 		<designationCategory>Production</designationCategory>
+		<thingClass>VilousTal.Building_AquaPlanter</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Aquaplanter/Aquaplanter_Atlas</texPath>
 		</graphicData>
+		<extraGraphicData>
+			<texPath>Things/Building/Aquaplanter/Aquaplanter_Water_Atlas</texPath>
+			<graphicClass>Graphic_single</graphicClass>
+			<linkType>CornerFiller</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<li>Rock</li>
+			</linkFlags>
+		</extraGraphicData>
 		<costList>
 			<VilousCeramic>5</VilousCeramic>
 		</costList>
@@ -18,6 +28,6 @@
 			<WorkToBuild>750</WorkToBuild>
 			<Flammability>0</Flammability>
 		</statBases>
-	</ThingDef>
+	</VilousTal.VTThingDef>
 
 </Defs>
