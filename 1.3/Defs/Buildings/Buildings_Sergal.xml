@@ -7,17 +7,39 @@
 		<description>Makes the water plants grow.</description>
 		<designationCategory>Production</designationCategory>
 		<thingClass>VilousTal.Building_AquaPlanter</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
 			<texPath>Things/Building/Aquaplanter/Aquaplanter_Atlas</texPath>
-		</graphicData>
-		<extraGraphicData>
-			<texPath>Things/Building/Aquaplanter/Aquaplanter_Water_Atlas</texPath>
-			<graphicClass>Graphic_single</graphicClass>
+			<graphicClass>VilousTal.VTGraphic_Linked</graphicClass>
+			<!--
 			<linkType>CornerFiller</linkType>
 			<linkFlags>
 				<li>Wall</li>
 				<li>Rock</li>
 			</linkFlags>
+			-->
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<extraGraphicData>
+			<texPath>Things/Building/Aquaplanter/Aquaplanter_Water_Atlas</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+			<graphicClass>VilousTal.VTGraphic_Linked</graphicClass>
+			<!--
+			<linkType>CornerFiller</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<li>Rock</li>
+			</linkFlags>
+			-->
 		</extraGraphicData>
 		<costList>
 			<VilousCeramic>5</VilousCeramic>
