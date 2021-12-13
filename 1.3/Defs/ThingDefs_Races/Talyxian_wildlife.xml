@@ -678,10 +678,10 @@
   <ThingDef ParentName="AnimalThingBase">
     <defName>HouseMite</defName>
     <label>house mite</label>
-    <description>Scrubbing Bubbles Sample text</description>
+    <description>An urchin-like Talyxian organism that are seen as pests due to them often competing with livestock.</description>
     <statBases>
-      <MoveSpeed>3.5</MoveSpeed>
-	   <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <MoveSpeed>2</MoveSpeed>
+	   <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
       <MarketValue>50</MarketValue>
       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
     </statBases>
@@ -703,7 +703,7 @@
       <baseBodySize>0.2</baseBodySize>
       <baseHungerRate>0.1</baseHungerRate>
       <baseHealthScale>0.29</baseHealthScale>
-      <foodType>OmnivoreRoughAnimal</foodType>
+      <foodType>VegetarianRoughAnimal</foodType>
       <leatherDef>Leather_Light</leatherDef>
       <wildness>0.50</wildness>
       <trainability>None</trainability>
@@ -803,8 +803,9 @@
   
   <ThingDef ParentName="AnimalThingBase">
     <defName>HandstandSnail</defName>
+	<!-- Featherless. Biped. THIS IS A MAN-->
     <label>handstand snail</label>
-    <description>Sus Sample text</description>
+    <description>Also known as Talyxian Hamsters, these suspiciously bean shaped creatures are commonly kept as pets. Most of their face is obscured by the fold on their head. They have a poor center of mass and constantly tumble about</description>
     <statBases>
       <MoveSpeed>4</MoveSpeed>
       <MarketValue>50</MarketValue>
@@ -812,46 +813,19 @@
     </statBases>
     <tools>
       <li>
-        <label>left claw</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>3.6</power>
-        <cooldownTime>1.5</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <label>right claw</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>3.6</power>
-        <cooldownTime>1.5</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <capacities>
-          <li>Bite</li>
-        </capacities>
-        <power>6</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <chanceFactor>0.7</chanceFactor>
-      </li>
-      <li>
         <label>head</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>2</power>
-        <cooldownTime>2</cooldownTime>
+        <power>5</power>
+        <cooldownTime>5</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
+        <chanceFactor>0.5</chanceFactor>
       </li>
     </tools>
     <race>
-      <body>QuadrupedAnimalWithPaws</body>
+      <body>ArmlessBiped</body>
       <baseBodySize>0.2</baseBodySize>
       <baseHungerRate>0.1</baseHungerRate>
       <baseHealthScale>0.29</baseHealthScale>
@@ -902,7 +876,7 @@
     <defName>HandstandSnail</defName>
     <label>handstand snail</label>
     <race>HandstandSnail</race>
-    <combatPower>30</combatPower>
+    <combatPower>1</combatPower>
     <ecoSystemWeight>0.20</ecoSystemWeight>
 	
     <lifeStages>
@@ -950,7 +924,7 @@
   <ThingDef ParentName="AnimalThingBase">
     <defName>TalyxianWolf</defName>
     <label>talyxian wolf</label>
-    <description>Sample Text</description>
+    <description>Despite it's name and appearance, this large Talyxian organism has extremely different biology than talyxian dogs, actually being closer related to Talyxian rooters. They are extremely rare and are given high regard in shigu society.</description>
     <statBases>
       <MoveSpeed>5.5</MoveSpeed>
 	  <MeleeDodgeChance>14</MeleeDodgeChance>
