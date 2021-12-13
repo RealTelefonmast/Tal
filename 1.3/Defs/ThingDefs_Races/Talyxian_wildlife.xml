@@ -567,7 +567,7 @@
       <baseHealthScale>2</baseHealthScale>
       <baseHungerRate>0.535</baseHungerRate>
       <foodType>VegetarianRoughAnimal</foodType>
-      <leatherDef>Leather_Bluefur</leatherDef>
+      <leatherDef>Urchin_Shards</leatherDef>
       <gestationPeriodDays>6.66</gestationPeriodDays>
       <wildness>0.6</wildness>
       <roamMtbDays>2</roamMtbDays>
@@ -678,7 +678,7 @@
   <ThingDef ParentName="AnimalThingBase">
     <defName>HouseMite</defName>
     <label>house mite</label>
-    <description>An urchin-like Talyxian organism that are seen as pests due to them often competing with livestock.</description>
+    <description>An urchin-like Talyxian organism that are seen as pests due to them often getting into houses and eating all kinds of foods.</description>
     <statBases>
       <MoveSpeed>2</MoveSpeed>
 	   <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
@@ -701,10 +701,10 @@
     <race>
       <body>Echinoderm</body>
       <baseBodySize>0.2</baseBodySize>
-      <baseHungerRate>0.1</baseHungerRate>
+      <baseHungerRate>0.2</baseHungerRate>
       <baseHealthScale>0.29</baseHealthScale>
-      <foodType>VegetarianRoughAnimal</foodType>
-      <leatherDef>Leather_Light</leatherDef>
+      <foodType>OmnivoreRoughAnimal</foodType>
+      <leatherDef>Urchin_Shards</leatherDef>
       <wildness>0.50</wildness>
       <trainability>None</trainability>
       <petness>0.15</petness>

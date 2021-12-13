@@ -105,4 +105,30 @@
     </stuffProps>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>Urchin_Shards</defName>
+    <label>Urchin Shards</label>
+    <description>Bits and pieces of urchin shells</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Urchinshell</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Stone_Drop</soundInteract>
+    <soundDrop>Stone_Drop</soundDrop>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>.5</Mass>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+	  <li>shigu</li>
+    </thingCategories>
+    <deepCommonality>4</deepCommonality>
+    <deepCountPerPortion>45</deepCountPerPortion>
+    <deepLumpSizeRange>20~30</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+  </ThingDef>
 </Defs>
