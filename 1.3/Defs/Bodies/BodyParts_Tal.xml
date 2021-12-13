@@ -49,5 +49,14 @@
 	  <li>ManipulationLimbCore</li>
     </tags>
   </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>SolarWing</defName>
+    <label>solar wing</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>0.7</frostbiteVulnerability>
+    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+    <skinCovered>true</skinCovered>
+</BodyPartDef>
 
 </Defs>

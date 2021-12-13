@@ -808,18 +808,6 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Housemite/Housemite</texPath>
           <color>(110,95,82)</color>
-          <drawSize>1.0</drawSize>
-          <shaderType>CutoutComplex</shaderType>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Housemite/Dessicated_Housemite</texPath>
-          <drawSize>1.0</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Housemite/Housemite</texPath>
-          <color>(110,95,82)</color>
           <drawSize>1.1</drawSize>
           <shaderType>CutoutComplex</shaderType>
         </bodyGraphicData>
@@ -832,12 +820,24 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Housemite/Housemite</texPath>
           <color>(110,95,82)</color>
-          <drawSize>1.25</drawSize>
+          <drawSize>1.6</drawSize>
           <shaderType>CutoutComplex</shaderType>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Housemite/Dessicated_Housemite</texPath>
-          <drawSize>1.25</drawSize>
+          <drawSize>1.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Housemite/Housemite</texPath>
+          <color>(110,95,82)</color>
+          <drawSize>2.3</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Housemite/Dessicated_Housemite</texPath>
+          <drawSize>2.3</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
@@ -953,36 +953,36 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Handstandsnail/Handstandsnail</texPath>
           <color>(110,95,82)</color>
-          <drawSize>1.0</drawSize>
+          <drawSize>1.8</drawSize>
           <shaderType>CutoutComplex</shaderType>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Handstandsnail/Dessicated_Handstandsnail</texPath>
-          <drawSize>1.0</drawSize>
+          <drawSize>1.8</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Handstandsnail/Handstandsnail</texPath>
           <color>(110,95,82)</color>
-          <drawSize>1.1</drawSize>
+          <drawSize>2.2</drawSize>
           <shaderType>CutoutComplex</shaderType>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Handstandsnail/Dessicated_Handstandsnail</texPath>
-          <drawSize>1.1</drawSize>
+          <drawSize>2.2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Handstandsnail/Handstandsnail</texPath>
           <color>(110,95,82)</color>
-          <drawSize>1.25</drawSize>
+          <drawSize>2.6</drawSize>
           <shaderType>CutoutComplex</shaderType>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Handstandsnail/Dessicated_Handstandsnail</texPath>
-          <drawSize>1.25</drawSize>
+          <drawSize>2.6</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
@@ -1135,7 +1135,7 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Talwolf/Talwolf</texPath>
-          <drawSize>3</drawSize>
+          <drawSize>2.3</drawSize>
           <color>(220,198,160)</color>
           <shadowData>
             <volume>(0.3, 0.4, 0.3)</volume>
@@ -1144,7 +1144,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Talwolf/Dessicated_Talwolf</texPath>
-          <drawSize>3</drawSize>
+          <drawSize>2.3</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
