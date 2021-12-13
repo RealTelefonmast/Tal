@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!-- ======================= Talyxian Dog =============================== -->
+<!-- ============================TAL DOG================================ -->
 
   <ThingDef ParentName="AnimalThingBase">
     <defName>TalyxianDog</defName>
@@ -57,7 +57,7 @@
       </li>
     </tools>
     <race>
-      <body>QuadrupedAnimalWithPawsAndTailAndOneEye</body>
+      <body>QuadrupedAnimalWithOneEye</body>
       <petness>1</petness>
       <baseBodySize>0.75</baseBodySize>
       <baseHungerRate>0.4</baseHungerRate>
@@ -172,7 +172,8 @@
     </lifeStages>
   </PawnKindDef>
   
-  <!-- ======================= Tal Goat =============================== -->
+  <!-- ============================TAL GOAT================================ -->
+  
   <ThingDef ParentName="AnimalThingBase">
     <defName>TalyxianGoat</defName>
     <label>talyxian goat</label>
@@ -316,7 +317,9 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-    <!--========================Stalker=======================-->
+  
+  <!-- ============================TAL Stalker================================ -->
+    
 
 	<ThingDef ParentName="BigCatThingBase">
 		<defName>TalyxianStalker</defName>
@@ -385,6 +388,8 @@
       </li>
     </lifeStages>
   </PawnKindDef>
+  
+  <!-- ============================Snail Cow================================ -->
   
   <ThingDef ParentName="AnimalThingBase">
     <defName>SnailCow</defName>
@@ -539,6 +544,8 @@
     </lifeStages>
   </PawnKindDef>
 
+ <!-- ============================Urchin Cow================================ -->
+
 <ThingDef ParentName="AnimalThingBase">
     <defName>UrchinCow</defName>
     <label>urchin cow</label>
@@ -555,7 +562,7 @@
     <uiIconScale>1.35</uiIconScale>
     <race>
       <herdAnimal>true</herdAnimal>
-      <body>QuadrupedAnimalWithHooves</body>
+      <body>Echinoderm</body>
       <baseBodySize>3.5</baseBodySize>
       <baseHealthScale>2</baseHealthScale>
       <baseHungerRate>0.535</baseHungerRate>
@@ -598,46 +605,20 @@
       <li>
         <label>head</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Sharp</li>
+		  <li>Scratch</li>
         </capacities>
-        <power>15</power>
-        <cooldownTime>2.6</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <power>16</power>
+        <cooldownTime>3</cooldownTime>
+        <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-      </li>
-      <li>
-        <label>left hoof</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <label>right hoof</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <capacities>
-          <li>Bite</li>
-        </capacities>
-        <power>1</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <chanceFactor>0.5</chanceFactor>
       </li>
     </tools>
   </ThingDef>
+  
 
-<PawnKindDef Name="Muffalo" ParentName="AnimalKindBase">
+
+<PawnKindDef ParentName="AnimalKindBase">
     <defName>UrchinCow</defName>
     <label>urchin cow</label>
     <race>UrchinCow</race>
@@ -692,6 +673,8 @@
     </lifeStages>
   </PawnKindDef>
   
+ <!-- ============================House Mite================================ -->
+  
   <ThingDef ParentName="AnimalThingBase">
     <defName>HouseMite</defName>
     <label>house mite</label>
@@ -702,48 +685,21 @@
       <MarketValue>50</MarketValue>
       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
     </statBases>
-    <tools>
-      <li>
-        <label>left claw</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>3.6</power>
-        <cooldownTime>1.5</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <label>right claw</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>3.6</power>
-        <cooldownTime>1.5</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <capacities>
-          <li>Bite</li>
-        </capacities>
-        <power>6</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <chanceFactor>0.7</chanceFactor>
-      </li>
+   <tools>
       <li>
         <label>head</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Sharp</li>
+		  <li>Scratch</li>
         </capacities>
-        <power>2</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <power>5</power>
+        <cooldownTime>3</cooldownTime>
+        <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
       </li>
     </tools>
     <race>
-      <body>QuadrupedAnimalWithPaws</body>
+      <body>Echinoderm</body>
       <baseBodySize>0.2</baseBodySize>
       <baseHungerRate>0.1</baseHungerRate>
       <baseHealthScale>0.29</baseHealthScale>
@@ -843,6 +799,7 @@
     </lifeStages>
   </PawnKindDef>
   
+  <!-- ============================Handstand Snail================================ -->
   
   <ThingDef ParentName="AnimalThingBase">
     <defName>HandstandSnail</defName>
@@ -988,6 +945,8 @@
     </lifeStages>
   </PawnKindDef>
   
+  <!-- ============================TAL WOLF================================ -->
+  
   <ThingDef ParentName="AnimalThingBase">
     <defName>TalyxianWolf</defName>
     <label>talyxian wolf</label>
@@ -1042,7 +1001,7 @@
       </li>
     </tools>
     <race>
-      <body>QuadrupedAnimalWithPawsAndWingsAndTailAndOneEye</body>
+      <body>QuadrupedAnimalWithOneEyeAndWings</body>
       <petness>1</petness>
       <baseBodySize>1</baseBodySize>
       <baseHungerRate>0.4</baseHungerRate>

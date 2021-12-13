@@ -2,6 +2,8 @@
 
 <Defs>
 
+  <!-- ============================SERGAL================================ -->
+
 <BodyPartDef>
     <defName>TalSergalTail</defName>
     <label>tail</label>
@@ -49,6 +51,8 @@
 	  <li>ManipulationLimbCore</li>
     </tags>
   </BodyPartDef>
+  
+   <!-- ============================TALWOLF================================ -->
   
   <BodyPartDef>
     <defName>SolarWing</defName>
