@@ -104,5 +104,16 @@
 			<li>Sergalhair</li>
 		</styleTags>
 	</HairDef>
+	
+		<HairDef>
+		<defName>BasilbrowHair</defName>
+		<label>Basilbrow</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Basilbrow</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
 
 </Defs>
