@@ -13,5 +13,8 @@ namespace VilousTal
     {
         public static TalConfigDef MainConfigDef;
         public static PawnKindDef SergalColonist;
+
+        //
+        public static ThingDef TalMozuuk;
     }
 }
