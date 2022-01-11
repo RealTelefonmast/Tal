@@ -331,6 +331,7 @@
 			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
 		</statBases>
+	
 		<race>
 			<leatherDef>Leather_TalStalker</leatherDef>
 			<trainability>Advanced</trainability>
@@ -347,6 +348,12 @@
     <defName>TalyxianStalker</defName>
     <label>talyxian stalker</label>
     <race>TalyxianStalker</race>
+		<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphics>
+			<li><texPath>Things/Pawn/Animal/Talstalkers/TalStalk_A</texPath></li>
+			<li><texPath>Things/Pawn/Animal/Talstalkers/TalStalk_B</texPath></li>
+
+		</alternateGraphics>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -495,6 +502,14 @@
     <race>SnailCow</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
+	
+	<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphics>
+			<li><texPath>Things/Pawn/Animal/Snailcow/Snailcow_A</texPath></li>
+			<li><texPath>Things/Pawn/Animal/Snailcow/Snailcow_B</texPath></li>
+			<li><texPath>Things/Pawn/Animal/Snailcow/Snailcow_C</texPath></li>
+
+		</alternateGraphics>
     <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
