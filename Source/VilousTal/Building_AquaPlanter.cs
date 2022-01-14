@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RimWorld;
 using UnityEngine;
 using Verse;
 
 namespace VilousTal
 {
-    public class AquaPlanterSet
+    public class AquaPlanterSet : IPlantToGrowSettable
     {
         private const int valuePerPart = 100;
+
+        private Map map;
+        private List<IntVec3> cells = new();
+
+        private ThingDef currentPlant;
 
         private float internalValue = 0;
         private List<Building_AquaPlanter> parts;
@@ -21,21 +27,66 @@ namespace VilousTal
         public float TotalStored => internalValue;
         public float CurrentLevel => internalValue / TotalCapacity;
 
+        public Map Map => map;
+        public IEnumerable<IntVec3> Cells => cells;
+
+        public AquaPlanterSet(Map map)
+        {
+            this.map = map;
+        }
+
         private void AddPart(Building_AquaPlanter part)
         {
             parts ??= new List<Building_AquaPlanter>();
             parts.Add(part);
+            cells.Add(part.Position);
         }
-
 
         public void Notify_AddWater(float amount)
         {
             internalValue = Mathf.Clamp(internalValue + amount, 0, TotalCapacity);
         }
 
+        //PlantGrower
+        public IEnumerable<Plant> PlantsOnMe
+        {
+            get
+            {
+                foreach (IntVec3 c in Cells)
+                {
+                    List<Thing> thingList = Map.thingGrid.ThingsListAt(c);
+                    int num;
+                    for (int i = 0; i < thingList.Count; i = num + 1)
+                    {
+                        if (thingList[i] is Plant plant)
+                        {
+                            yield return plant;
+                        }
+                        num = i;
+                    }
+                }
+            }
+        }
+
+        public ThingDef GetPlantDefToGrow()
+        {
+            return currentPlant;
+        }
+
+        public void SetPlantDefToGrow(ThingDef plantDef)
+        {
+            currentPlant = plantDef;
+        }
+
+        public bool CanAcceptSowNow()
+        {
+            return CurrentLevel > 0.5f;
+        }
+
+        //
         public static AquaPlanterSet Regenerate(Thing root)
         {
-            AquaPlanterSet newSet = new AquaPlanterSet();
+            AquaPlanterSet newSet = new AquaPlanterSet(root.Map);
             HashSet<AquaPlanterSet> oldSets = new HashSet<AquaPlanterSet>();
 
             HashSet<Thing> closedSet = new HashSet<Thing>();
@@ -83,7 +134,7 @@ namespace VilousTal
         }
     }
 
-    public class Building_AquaPlanter : Building_VT
+    public class Building_AquaPlanter : Building_VT, IPlantToGrowSettable
     {
         private AquaPlanterSet assignedSet;
 
@@ -94,14 +145,38 @@ namespace VilousTal
         }
 
         public float WaterLevel => assignedSet.CurrentLevel;
+        public IEnumerable<IntVec3> Cells => AquaPlanterSet.Cells;
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
             this.AquaPlanterSet = AquaPlanterSet.Regenerate(this);
+            AquaPlanterSet.SetPlantDefToGrow(def.building.defaultPlantToGrow);
             UpdateGraphic();
         }
 
+        public override void PostMake()
+        {
+            base.PostMake();
+        }
+
+        //
+        public ThingDef GetPlantDefToGrow()
+        {
+            return AquaPlanterSet.GetPlantDefToGrow();
+        }
+
+        public void SetPlantDefToGrow(ThingDef plantDef)
+        {
+            AquaPlanterSet.SetPlantDefToGrow(plantDef);
+        }
+
+        public bool CanAcceptSowNow()
+        {
+            return AquaPlanterSet.CanAcceptSowNow();
+        }
+
+        //
         private void UpdateGraphic()
         {
             AquaPlanterSet.AllParts.ForEach(t =>
@@ -120,7 +195,7 @@ namespace VilousTal
         }
 
         //public VTGraphic_Linked graphInt;
-        private VTGraphic_Linked WaterGraphic => ExtraGraphic as VTGraphic_Linked;//graphInt??= new VTGraphic_Linked((ExtraGraphic as Graphic_Linked).subGraphic);
+        private VTGraphic_LinkedSelf WaterGraphic => ExtraGraphic as VTGraphic_LinkedSelf;//graphInt??= new VTGraphic_Linked((ExtraGraphic as Graphic_Linked).subGraphic);
 
         public override void Draw()
         {
@@ -131,7 +206,7 @@ namespace VilousTal
         public override void Print(SectionLayer layer)
         {
             base.Print(layer);
-            WaterGraphic.Print(layer, this, 0, AltitudeLayer.BuildingOnTop, debug_DrawExtra);
+            WaterGraphic.Print(layer, this, 0, AltitudeLayer.BuildingOnTop);
         }
 
         public override string GetInspectString()
@@ -139,17 +214,27 @@ namespace VilousTal
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Water Level: {WaterLevel.ToStringPercent()}");
             sb.AppendLine($"Connected Parts: {AquaPlanterSet.AllParts.Count}");
+            sb.AppendLine($"CanAcceptSowNow: {CanAcceptSowNow()}");
+            sb.AppendLine($"Cells: {Cells.Count()}");
+            sb.AppendLine($"ToGrow: {GetPlantDefToGrow()}");
+            var report = PlantUtility.CanEverPlantAt(GetPlantDefToGrow(), Position, Map, out Thing blocker);
+            sb.AppendLine($"CanPlantEverAt: {report.Accepted} '{report.Reason}' Blocker: {blocker}");
+            sb.AppendLine($"CanPlantNowAt: {PlantUtility.CanNowPlantAt(GetPlantDefToGrow(), Position, Map)}");
+            sb.AppendLine($"{(PlantUtility.GrowthSeasonNow(base.Position, base.Map, true) ? "GrowSeasonHereNow".Translate() : "CannotGrowBadSeasonTemperature".Translate())}");
             return sb.ToString().TrimEndNewlines();
         }
 
-        private bool debug_ShowSet;
-        private bool debug_DrawExtra = true;
+        public bool debug_ShowSet;
+        public static bool debug_DrawBasic = true;
+        public static bool debug_DrawExtra = true;
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (var gizmo in base.GetGizmos())
             {
                 yield return gizmo;
             }
+
+            yield return PlantToGrowSettableUtility.SetPlantToGrowCommand(this);
 
             if (DebugSettings.godMode)
             {
@@ -169,6 +254,15 @@ namespace VilousTal
                     action = delegate
                     {
                         debug_ShowSet = !debug_ShowSet;
+                    }
+                };
+                yield return new Command_Action()
+                {
+                    defaultLabel = "Switch Basic",
+                    action = delegate
+                    {
+                        debug_DrawBasic = !debug_DrawBasic;
+                        UpdateGraphic();
                     }
                 };
                 yield return new Command_Action()
