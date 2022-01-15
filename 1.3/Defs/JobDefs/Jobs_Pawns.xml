@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Growing -->
+	<JobDef>
+		<defName>AquaplanterSow</defName>
+		<driverClass>VilousTal.JobDriver_AquaplanterSow</driverClass>
+		<reportString>sowing TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+
+	<JobDef>
+		<defName>AquaplanterHarvest</defName>
+		<driverClass>VilousTal.JobDriver_AquaplanterHarvest</driverClass>
+		<reportString>harvesting TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+</Defs>

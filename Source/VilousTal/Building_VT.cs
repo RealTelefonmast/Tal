@@ -10,23 +10,29 @@ namespace VilousTal
     public class Building_VT : Building
     {
         public new VTThingDef def;
-        protected Graphic extraGraphicInt;
+        protected VTGraphic[] graphics;
 
-        public bool UsesExtraGraphic => def.extraGraphicData != null;
+        public bool HasExtraGraphics => !def.extraGraphics.NullOrEmpty();
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
             this.def = (VTThingDef)base.def;
+            if (HasExtraGraphics)
+            {
+                graphics = new VTGraphic[def.extraGraphics.Count];
+                for (var i = 0; i < def.extraGraphics.Count; i++)
+                {
+                    var extraGraphic = def.extraGraphics[i];
+                    graphics[i] = new VTGraphic(this, extraGraphic, i);
+                }
+            }
         }
 
-        public Graphic ExtraGraphic
+        public VTGraphic ExtraGraphic(int index)
         {
-            get
-            {
-                if(!UsesExtraGraphic) return BaseContent.BadGraphic;
-                return extraGraphicInt ??= def.extraGraphicData.GraphicColoredFor(this);
-            }
+            //if (!HasExtraGraphics || graphics.Length-1 < index) return BaseContent.BadGraphic;
+            return graphics[index];
         }
     }
 }

@@ -86,7 +86,7 @@
           "ref/net472/mscorlib.dll": {}
         }
       },
-      "Lib.Harmony/2.1.1": {
+      "Lib.Harmony/2.2.0": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -125,7 +125,7 @@
           "lib/net46/_._": {}
         }
       },
-      "Microsoft.NETCore.Platforms/6.0.0": {
+      "Microsoft.NETCore.Platforms/6.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -343,16 +343,16 @@
         "ref/net472/mscorlib.dll"
       ]
     },
-    "Lib.Harmony/2.1.1": {
-      "sha512": "CZiVcq01bVIjL2baWW5SVGZWyd6ew8adFp4BB2bzZfIGcWkTEto0G9sKu+9HDrEd75qBq3EHnZxx/gizi4NnqA==",
+    "Lib.Harmony/2.2.0": {
+      "sha512": "1sQzocsFLbQ/t6U5t3h2Yw7ntZ7KnLqAnaDRbyS4bLXtBZCjghh1VoCgsZTkP8ieq9JMlr5aPxcdzZpy/9JZzw==",
       "type": "package",
-      "path": "lib.harmony/2.1.1",
+      "path": "lib.harmony/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "HarmonyLogo.png",
         "LICENSE",
-        "lib.harmony.2.1.1.nupkg.sha512",
+        "lib.harmony.2.2.0.nupkg.sha512",
         "lib.harmony.nuspec",
         "lib/net35/0Harmony.dll",
         "lib/net35/0Harmony.xml",
@@ -400,10 +400,10 @@
         "microsoft.build.utilities.core.nuspec"
       ]
     },
-    "Microsoft.NETCore.Platforms/6.0.0": {
-      "sha512": "bdl1k9jGw1UvguaqkzJYTwUFkHNm4YWDP2Cz7WBy41y0wgYtzY7uCbhSzqyO710uigPMOHAVm2yX8ZSOKrQTDg==",
+    "Microsoft.NETCore.Platforms/6.0.1": {
+      "sha512": "pyZhOIt/DpmKdv9Ahd8gZeTB1YvE8Rto8dpWyFWnIaFec9QDLbE6bCdFOlbO6T+DqYlgufVVoR7XtMyNX4ESig==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/6.0.0",
+      "path": "microsoft.netcore.platforms/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -411,7 +411,7 @@
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.6.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.6.0.1.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt"

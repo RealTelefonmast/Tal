@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<VilousTal.VTThingDef ParentName="WallBase_Tal">
+		<defName>Aquaplanter</defName>
+		<label>aquaplanter</label>
+		<description>Makes the water plants grow.</description>
+		<designationCategory>Production</designationCategory>
+		<thingClass>VilousTal.Building_AquaPlanter</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData Inherit="false">
+			<texPath>Things/Building/Aquaplanter/Aquaplanter_Atlas_Back</texPath>
+			<shaderType>CutoutComplex</shaderType>
+			<graphicClass>VilousTal.VTGraphic_LinkedSelf</graphicClass>
+			<!--
+			<linkType>Basic</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<li>Rock</li>
+			</linkFlags>
+			-->
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<extraGraphics>
+			<li>
+				<texPath>Things/Building/Aquaplanter/Aquaplanter_Water_Atlas</texPath>
+				<shaderType>TransparentPostLight</shaderType>
+				<graphicClass>VilousTal.VTGraphic_LinkedSelf</graphicClass>
+			</li>
+			<li>
+				<texPath>Things/Building/Aquaplanter/Aquaplanter_Atlas_Front</texPath>
+				<shaderType>CutoutComplex</shaderType>
+				<graphicClass>VilousTal.VTGraphic_LinkedSelf</graphicClass>
+			</li>
+		</extraGraphics>
+		<tickerType>Rare</tickerType>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<holdsRoof>false</holdsRoof>
+		<fillPercent>1</fillPercent>
+		<blockPlants>true</blockPlants>
+		<blockLight>false</blockLight>
+		<blockWind>false</blockWind>
+		<fertility>2.8</fertility>
+		<building>
+			<isEdifice>false</isEdifice>
+			<defaultPlantToGrow>TalMozuuk</defaultPlantToGrow>
+			<sowTag>Hydroponic</sowTag>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<costList>
+			<VilousCeramic>5</VilousCeramic>
+		</costList>
+		<uiIconPath>Things/Building/Aquaplanter/Aquaplanter_Icon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>750</WorkToBuild>
+			<Flammability>0</Flammability>
+		</statBases>
+	</VilousTal.VTThingDef>
+
+</Defs>

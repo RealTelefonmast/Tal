@@ -38,14 +38,20 @@ namespace VilousTal
             return c.GetFirstThing(parent.Map, parent.def) != null;
         }
 
+        public override Material MatSingleFor(Thing thing)
+        {
+            return LinkedDrawMatFrom(thing, thing.Position);
+        }
+
         public void Print(SectionLayer layer, Thing thing, float extraRotation, AltitudeLayer? altitudeOverride)
         {
-            var drawPos = thing.DrawPos;
-            if (altitudeOverride != null)
-                drawPos += new Vector3(0, altitudeOverride.Value.AltitudeFor(), 0);
+            Print(layer, thing, thing.DrawPos, extraRotation, altitudeOverride?.AltitudeFor() ?? 0);
+        }
 
-            Material mat = this.LinkedDrawMatFrom(thing, thing.Position);
-            Printer_Plane.PrintPlane(layer, drawPos, new Vector2(1.0f, 1.0f), mat, extraRotation);
+        public void Print(SectionLayer layer, Thing thing, Vector3 drawPos, float extraRotation, float altitudeOverride)
+        {
+            Material mat = LinkedDrawMatFrom(thing, thing.Position);
+            Printer_Plane.PrintPlane(layer, new Vector3(drawPos.x, altitudeOverride, drawPos.z), Vector2.one, mat, extraRotation);
         }
 
         public override void Print(SectionLayer layer, Thing thing, float extraRotation)
