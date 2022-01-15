@@ -16,5 +16,9 @@ namespace VilousTal
 
         //
         public static ThingDef TalMozuuk;
+
+        //Jobs
+        public static JobDef AquaplanterSow;
+        public static JobDef AquaplanterHarvest;
     }
 }

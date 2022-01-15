@@ -60,13 +60,13 @@ namespace VilousTal
                 Printer_Plane.PrintPlane(layer, drawPos, new Vector2(1f, 1f), mat, extraRotation, false, null, null, 0.01f, 0f);
             }
             */
-            if (Building_AquaPlanter.debug_DrawBasic)
+            if (true)
             {
                 Material mat = this.LinkedDrawMatFrom(thing, thing.Position);
                 Printer_Plane.PrintPlane(layer, drawPos, new Vector2(1.0f, 1.0f), mat, extraRotation, false, null, null, 0.01f, 0f);
             }
 
-            if (Building_AquaPlanter.debug_DrawExtra)
+            if (false)
             {
                 //if (!drawExtra) return;
                 IntVec3 position = thing.Position;

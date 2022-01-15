@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 
 namespace VilousTal
 {
@@ -80,7 +81,7 @@ namespace VilousTal
 
         public bool CanAcceptSowNow()
         {
-            return CurrentLevel > 0.5f;
+            return CurrentLevel > 0.10f;
         }
 
         //
@@ -134,9 +135,13 @@ namespace VilousTal
         }
     }
 
-    public class Building_AquaPlanter : Building_VT, IPlantToGrowSettable
+    public class Building_AquaPlanter : Building_VT, IPlantToGrowSettable, IPlantSimulatorHolder
     {
         private AquaPlanterSet assignedSet;
+
+        //
+        private Plant internalPlant;
+        private PlantGrowthSimulator internalPlantSimulator;
 
         public AquaPlanterSet AquaPlanterSet
         {
@@ -147,17 +152,40 @@ namespace VilousTal
         public float WaterLevel => assignedSet.CurrentLevel;
         public IEnumerable<IntVec3> Cells => AquaPlanterSet.Cells;
 
+        //
+        public Thing Thing => this;
+
+        public bool HasPlant => internalPlant != null;
+        public float ProvidedFertility => (float)Math.Round(Mathf.Log10(Mathf.Lerp(1,10,WaterLevel)) * def.fertility, 2);
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
             this.AquaPlanterSet = AquaPlanterSet.Regenerate(this);
             AquaPlanterSet.SetPlantDefToGrow(def.building.defaultPlantToGrow);
+            internalPlantSimulator = new PlantGrowthSimulator(this);
             UpdateGraphic();
         }
 
         public override void PostMake()
         {
             base.PostMake();
+        }
+
+        public override void TickRare()
+        {
+            base.TickRare();
+            TryCollectRainWater();
+            internalPlantSimulator.TickLong();
+        }
+
+        private void TryCollectRainWater()
+        {
+            if (Position.Roofed(Map)) return;
+            if (Map.weatherManager.RainRate > 0.01f && Rand.Value < 6f)
+            {
+                Notify_AddedWater(Map.weatherManager.RainRate * 2);
+            }
         }
 
         //
@@ -173,7 +201,17 @@ namespace VilousTal
 
         public bool CanAcceptSowNow()
         {
-            return AquaPlanterSet.CanAcceptSowNow();
+            return !HasPlant && AquaPlanterSet.CanAcceptSowNow();
+        }
+
+        public void Notify_DoSow()
+        {
+            var def = GetPlantDefToGrow();
+            if (def != null)
+            {
+                internalPlant = (Plant)ThingMaker.MakeThing(def);
+                internalPlantSimulator.SetPlant(internalPlant);
+            }
         }
 
         //
@@ -181,7 +219,7 @@ namespace VilousTal
         {
             AquaPlanterSet.AllParts.ForEach(t =>
             {
-                t.extraGraphicInt = ExtraGraphic.GetColoredVersion(ExtraGraphic.Shader, new Color(1, 1, 1, WaterLevel), Color.white);
+                t.graphics[0].SetNewColor(new Color(1, 1, 1, WaterLevel));
                 Map.mapDrawer.MapMeshDirty(t.Position, MapMeshFlag.Terrain);
                 Map.mapDrawer.MapMeshDirty(t.Position, MapMeshFlag.Buildings);
                 Map.mapDrawer.MapMeshDirty(t.Position, MapMeshFlag.Things);
@@ -195,7 +233,8 @@ namespace VilousTal
         }
 
         //public VTGraphic_Linked graphInt;
-        private VTGraphic_LinkedSelf WaterGraphic => ExtraGraphic as VTGraphic_LinkedSelf;//graphInt??= new VTGraphic_Linked((ExtraGraphic as Graphic_Linked).subGraphic);
+        private VTGraphic WaterGraphic => ExtraGraphic(0);
+        private VTGraphic WallGraphic => ExtraGraphic(1);
 
         public override void Draw()
         {
@@ -203,16 +242,44 @@ namespace VilousTal
                 GenDraw.DrawFieldEdges(AquaPlanterSet.AllParts.Select(t => t.Position).ToList(), Color.cyan);
         }
 
+        //
+        protected static Vector2[] UVS = new Vector2[] {new(0f, 0f), new(0f, 1f), new(1f, 1f), new(1f, 0f)};
+
         public override void Print(SectionLayer layer)
         {
             base.Print(layer);
-            WaterGraphic.Print(layer, this, 0, AltitudeLayer.BuildingOnTop);
+            //
+            DrawPlants(layer, AltitudeLayer.Building.AltitudeFor(0.25f));
+            //            
+            WaterGraphic.Print(layer, this, 0);
+            WallGraphic.Print(layer, this, 0);
+        }
+
+        private void DrawPlants(SectionLayer layer, float altitudeOverride)
+        {
+            if (internalPlant is null) return;
+
+            Rand.PushState();
+            Rand.Seed = base.Position.GetHashCode();
+            var drawPos = new Vector3(DrawPos.x, altitudeOverride, DrawPos.z);
+            var mat = internalPlant.Graphic.MatSingle;
+            var randBool = Rand.Bool;
+            Graphic.TryGetTextureAtlasReplacementInfo(mat, internalPlant.def.category.ToAtlasGroup(), randBool, true, out mat, out var _, out _);
+            
+            Printer_Plane.PrintPlane(layer, drawPos, new Vector2(0.35f, 0.35f), mat, 0, randBool, UVS, new Color32[4], 0.01f, 0f);
+            Rand.PopState();
         }
 
         public override string GetInspectString()
         {
             StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Plant: {internalPlant}: {internalPlant?.Growth}");
+            sb.AppendLine($"LifeStage: {internalPlant?.LifeStage} | Resting: {internalPlant?.Resting}");
+            //sb.AppendLine($"GrowthPT: {internalPlant?.GrowthPerTick} | GrowthRate: {internalPlant?.GrowthRate}");
             sb.AppendLine($"Water Level: {WaterLevel.ToStringPercent()}");
+            sb.AppendLine($"CanAcceptSow: {CanAcceptSowNow()}");
+            sb.AppendLine($"Fertility: {ProvidedFertility.ToStringPercent()}");
+            /*
             sb.AppendLine($"Connected Parts: {AquaPlanterSet.AllParts.Count}");
             sb.AppendLine($"CanAcceptSowNow: {CanAcceptSowNow()}");
             sb.AppendLine($"Cells: {Cells.Count()}");
@@ -221,12 +288,11 @@ namespace VilousTal
             sb.AppendLine($"CanPlantEverAt: {report.Accepted} '{report.Reason}' Blocker: {blocker}");
             sb.AppendLine($"CanPlantNowAt: {PlantUtility.CanNowPlantAt(GetPlantDefToGrow(), Position, Map)}");
             sb.AppendLine($"{(PlantUtility.GrowthSeasonNow(base.Position, base.Map, true) ? "GrowSeasonHereNow".Translate() : "CannotGrowBadSeasonTemperature".Translate())}");
+            */
             return sb.ToString().TrimEndNewlines();
         }
 
         public bool debug_ShowSet;
-        public static bool debug_DrawBasic = true;
-        public static bool debug_DrawExtra = true;
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (var gizmo in base.GetGizmos())
@@ -258,19 +324,10 @@ namespace VilousTal
                 };
                 yield return new Command_Action()
                 {
-                    defaultLabel = "Switch Basic",
+                    defaultLabel = "Add pLANT",
                     action = delegate
                     {
-                        debug_DrawBasic = !debug_DrawBasic;
-                        UpdateGraphic();
-                    }
-                };
-                yield return new Command_Action()
-                {
-                    defaultLabel = "Switch Extra",
-                    action = delegate
-                    {
-                        debug_DrawExtra = !debug_DrawExtra;
+                        Notify_DoSow();
                         UpdateGraphic();
                     }
                 };

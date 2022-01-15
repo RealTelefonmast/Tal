@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ============= Growing ============= -->
+	<WorkGiverDef>
+		<defName>AquaplanterSow</defName>
+		<label>sow crops</label>
+		<giverClass>VilousTal.WorkGiver_AquaplanterSow</giverClass>
+		<workType>Growing</workType>
+		<priorityInType>50</priorityInType>
+		<verb>sow</verb>
+		<gerund>sowing</gerund>
+		<scanThings>true</scanThings>
+		<scanCells>false</scanCells>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>GrowerHarvest</defName>
+		<label>harvest crops</label>
+		<giverClass>VilousTal.WorkGiver_AquaplanterHarvest</giverClass>
+		<workType>Growing</workType>
+		<priorityInType>100</priorityInType>
+		<verb>harvest</verb>
+		<gerund>harvesting</gerund>
+		<scanThings>true</scanThings>
+		<scanCells>false</scanCells>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	
+</Defs>
