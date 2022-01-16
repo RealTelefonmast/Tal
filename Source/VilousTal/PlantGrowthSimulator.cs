@@ -25,10 +25,11 @@ namespace VilousTal
         private Thing ParentThing => parent.Thing;
 
         //
-        public bool ReadyForHarvest => curPlant.HarvestableNow;
+        public bool ReadyForHarvest => curPlant?.HarvestableNow ?? false;
 
         //Plant Sim
-        private ThingDef Def => curPlant.def;
+        public ThingDef Def => curPlant.def;
+        public Plant Plant => curPlant;
 
         private bool DyingBecauseExposedToLight => Def.plant.cavePlant && ParentThing.Spawned && Map.glowGrid.GameGlowAt(Position, true) > 0f;
 
@@ -131,6 +132,12 @@ namespace VilousTal
         public void SetPlant(Plant plant)
         {
             curPlant = plant;
+        }
+
+        public void Notify_PlantHarvested(Pawn byPawn)
+        {
+            curPlant.PlantCollected(byPawn);
+            curPlant = null;
         }
 
         //Plant Sim, mostly a copy of what happens inside Plant.TickLong

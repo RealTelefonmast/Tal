@@ -18,7 +18,7 @@ namespace VilousTal
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            return true;
+            return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
         }
 
         public override IEnumerable<Toil> MakeNewToils()

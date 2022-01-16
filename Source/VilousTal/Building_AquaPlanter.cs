@@ -140,7 +140,6 @@ namespace VilousTal
         private AquaPlanterSet assignedSet;
 
         //
-        private Plant internalPlant;
         private PlantGrowthSimulator internalPlantSimulator;
 
         public AquaPlanterSet AquaPlanterSet
@@ -154,8 +153,10 @@ namespace VilousTal
 
         //
         public Thing Thing => this;
+        public Plant HeldPlant => internalPlantSimulator.Plant;
 
-        public bool HasPlant => internalPlant != null;
+        public bool HasPlant => internalPlantSimulator.Plant != null;
+        public bool ReadyForHarvest => internalPlantSimulator.ReadyForHarvest;
         public float ProvidedFertility => (float)Math.Round(Mathf.Log10(Mathf.Lerp(1,10,WaterLevel)) * def.fertility, 2);
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -209,9 +210,15 @@ namespace VilousTal
             var def = GetPlantDefToGrow();
             if (def != null)
             {
-                internalPlant = (Plant)ThingMaker.MakeThing(def);
+                var internalPlant = (Plant)ThingMaker.MakeThing(def);
                 internalPlantSimulator.SetPlant(internalPlant);
             }
+        }
+
+        public void Notify_DoHarvest(Pawn byPawn)
+        {
+            internalPlantSimulator.Notify_PlantHarvested(byPawn);
+            AquaPlanterSet.Notify_AddWater(-2f);
         }
 
         //
@@ -257,14 +264,14 @@ namespace VilousTal
 
         private void DrawPlants(SectionLayer layer, float altitudeOverride)
         {
-            if (internalPlant is null) return;
+            if (HeldPlant is null) return;
 
             Rand.PushState();
             Rand.Seed = base.Position.GetHashCode();
             var drawPos = new Vector3(DrawPos.x, altitudeOverride, DrawPos.z);
-            var mat = internalPlant.Graphic.MatSingle;
+            var mat = HeldPlant.Graphic.MatSingle;
             var randBool = Rand.Bool;
-            Graphic.TryGetTextureAtlasReplacementInfo(mat, internalPlant.def.category.ToAtlasGroup(), randBool, true, out mat, out var _, out _);
+            Graphic.TryGetTextureAtlasReplacementInfo(mat, HeldPlant.def.category.ToAtlasGroup(), randBool, true, out mat, out var _, out _);
             
             Printer_Plane.PrintPlane(layer, drawPos, new Vector2(0.35f, 0.35f), mat, 0, randBool, UVS, new Color32[4], 0.01f, 0f);
             Rand.PopState();
@@ -273,8 +280,8 @@ namespace VilousTal
         public override string GetInspectString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Plant: {internalPlant}: {internalPlant?.Growth}");
-            sb.AppendLine($"LifeStage: {internalPlant?.LifeStage} | Resting: {internalPlant?.Resting}");
+            sb.AppendLine($"Plant: {HeldPlant}: {HeldPlant?.Growth}");
+            sb.AppendLine($"LifeStage: {HeldPlant?.LifeStage} | Resting: {HeldPlant?.Resting}");
             //sb.AppendLine($"GrowthPT: {internalPlant?.GrowthPerTick} | GrowthRate: {internalPlant?.GrowthRate}");
             sb.AppendLine($"Water Level: {WaterLevel.ToStringPercent()}");
             sb.AppendLine($"CanAcceptSow: {CanAcceptSowNow()}");
@@ -324,7 +331,7 @@ namespace VilousTal
                 };
                 yield return new Command_Action()
                 {
-                    defaultLabel = "Add pLANT",
+                    defaultLabel = "Add Plant",
                     action = delegate
                     {
                         Notify_DoSow();

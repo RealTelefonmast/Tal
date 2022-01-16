@@ -9,7 +9,7 @@
 		<drawerType>MapMeshOnly</drawerType>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<repairEffect>Repair</repairEffect>
-		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
 		<altitudeLayer>Building</altitudeLayer>
 		<statBases>
@@ -41,7 +41,6 @@
 			<WorkToBuild>2000</WorkToBuild>
 			<Flammability>0.0</Flammability>
 		</statBases>
-		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<passability>Impassable</passability>
 		<blockWind>true</blockWind>
 		<castEdgeShadows>true</castEdgeShadows>
@@ -79,6 +78,7 @@
 		<TRCategory>Misc</TRCategory>
 		<devObject>true</devObject>
 		<isNatural>true</isNatural>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 		<building>
 			<claimable>false</claimable>
 			<deconstructible>false</deconstructible>

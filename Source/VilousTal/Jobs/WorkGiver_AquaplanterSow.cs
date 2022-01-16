@@ -9,10 +9,8 @@ using Verse.AI;
 
 namespace VilousTal
 {
-    public class WorkGiver_AquaplanterSow : WorkGiver_Scanner
+    public abstract class WorkGiver_Aquaplanter : WorkGiver_Scanner
     {
-        protected static ThingDef wantedPlantDef;
-
         public override PathEndMode PathEndMode => PathEndMode.ClosestTouch;
 
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
@@ -20,11 +18,14 @@ namespace VilousTal
             List<Building> buildings = pawn.Map.listerBuildings.allBuildingsColonist;
             for (int i = 0; i < buildings.Count; i++)
             {
-                if (buildings[i] is Building_AquaPlanter planter && planter.CanAcceptSowNow() && pawn.CanReach(planter, PathEndMode, pawn.NormalMaxDanger()))
+                if (buildings[i] is Building_AquaPlanter planter && planter.CanAcceptSowNow() && pawn.CanReserveAndReach(planter, PathEndMode, pawn.NormalMaxDanger()))
                     yield return planter;
             }
         }
+    }
 
+    public class WorkGiver_AquaplanterSow : WorkGiver_Aquaplanter
+    {
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             if (t is not Building_AquaPlanter p || p.GetPlantDefToGrow() == null) return false;
