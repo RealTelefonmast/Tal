@@ -141,14 +141,20 @@ namespace VilousTal
         }
 
         //Plant Sim, mostly a copy of what happens inside Plant.TickLong
-        public void TickLong()
+        private int ticksSinceLast = 0;
+        public void Tick(int tickInterval)
         {
             if (curPlant == null) return;
+            if (ticksSinceLast < GenTicks.TickLongInterval)
+            {
+                ticksSinceLast += tickInterval;
+                return;
+            }
             if (PlantUtility.GrowthSeasonNow(Position, Map))
             {
                 float num = curPlant.growthInt;
                 bool flag = curPlant.LifeStage == PlantLifeStage.Mature;
-                curPlant.growthInt = Mathf.Clamp01(curPlant.growthInt + GrowthPerTick * 2000f);
+                curPlant.growthInt = Mathf.Clamp01(curPlant.growthInt + GrowthPerTick * ticksSinceLast);
                 if (((!flag && curPlant.LifeStage == PlantLifeStage.Mature) ||
                      (int) (num * 10f) != (int) (curPlant.growthInt * 10f)) && CurrentlyCultivated)
                 {
@@ -158,14 +164,14 @@ namespace VilousTal
 
             if (!HasEnoughLightToGrow)
             {
-                curPlant.unlitTicks += 2000;
+                curPlant.unlitTicks += ticksSinceLast;
             }
             else
             {
                 curPlant.unlitTicks = 0;
             }
-
-            curPlant.ageInt += 2000;
+            curPlant.ageInt += ticksSinceLast;
+            ticksSinceLast = 0;
         }
     }
 }

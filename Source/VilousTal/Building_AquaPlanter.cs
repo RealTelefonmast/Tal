@@ -177,7 +177,7 @@ namespace VilousTal
         {
             base.TickRare();
             TryCollectRainWater();
-            internalPlantSimulator.TickLong();
+            internalPlantSimulator.Tick(GenTicks.TickRareInterval);
         }
 
         private void TryCollectRainWater()

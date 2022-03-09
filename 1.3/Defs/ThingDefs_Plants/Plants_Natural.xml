@@ -25,14 +25,16 @@
 			<harvestYield>2</harvestYield>
 			<sowTags>
 				<li>Water</li>
+				<!--
 				<li>Ground</li>
 				<li>Hydroponic</li>
+				-->
 			</sowTags>
 			<growDays>3</growDays>
 			<visualSizeRange>0.3~0.8</visualSizeRange>
 			<purpose>Food</purpose>
 			<humanFoodPlant>true</humanFoodPlant>
-			<!---->
+			<!-- Not meant to spawn naturall - yet
 			<wildBiomes>
 				<Desert>25</Desert>
 				<TemperateForest>0.25</TemperateForest>
@@ -41,6 +43,7 @@
 			<wildClusterRadius>4</wildClusterRadius>
 			<wildClusterWeight>200</wildClusterWeight>
 			<wildOrder>2</wildOrder>
+			-->
 			
 			<!-- Mozuuk is very resilient-->
 			<harvestWork>65</harvestWork>
