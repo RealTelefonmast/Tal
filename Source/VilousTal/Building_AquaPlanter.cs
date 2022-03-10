@@ -43,9 +43,24 @@ namespace VilousTal
             cells.Add(part.Position);
         }
 
+        //
         public void Notify_AddWater(float amount)
         {
             internalValue = Mathf.Clamp(internalValue + amount, 0, TotalCapacity);
+        }
+
+        public void Notify_PartLost(Building_AquaPlanter part)
+        {
+            //Regenerate(part, part);
+
+            AquaPlanterSet newNet = null;
+            foreach (var root in part.AquaPlanterSet.AllParts)
+            {
+                if (root.AquaPlanterSet != newNet)
+                {
+                    newNet = Regenerate(root);
+                }
+            }
         }
 
         //PlantGrower
@@ -85,7 +100,7 @@ namespace VilousTal
         }
 
         //
-        public static AquaPlanterSet Regenerate(Thing root)
+        public static AquaPlanterSet Regenerate(Thing root, Thing toIgnore = null)
         {
             AquaPlanterSet newSet = new AquaPlanterSet(root.Map);
             HashSet<AquaPlanterSet> oldSets = new HashSet<AquaPlanterSet>();
@@ -99,6 +114,7 @@ namespace VilousTal
                 {
                     if (thing is Building_AquaPlanter planter)
                     {
+                        if(thing == toIgnore) continue;
                         if (planter.AquaPlanterSet != null)
                         {
                             oldSets.Add(planter.AquaPlanterSet);
@@ -162,10 +178,17 @@ namespace VilousTal
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
+            //Try add to existing network set
             this.AquaPlanterSet = AquaPlanterSet.Regenerate(this);
             AquaPlanterSet.SetPlantDefToGrow(def.building.defaultPlantToGrow);
             internalPlantSimulator = new PlantGrowthSimulator(this);
             UpdateGraphic();
+        }
+
+        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+        {
+            AquaPlanterSet.Notify_PartLost(this);
+            base.DeSpawn(mode);
         }
 
         public override void PostMake()
@@ -280,6 +303,7 @@ namespace VilousTal
         public override string GetInspectString()
         {
             StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Set: {AquaPlanterSet} | {AquaPlanterSet?.TotalCapacity}");
             sb.AppendLine($"Plant: {HeldPlant}: {HeldPlant?.Growth}");
             sb.AppendLine($"LifeStage: {HeldPlant?.LifeStage} | Resting: {HeldPlant?.Resting}");
             //sb.AppendLine($"GrowthPT: {internalPlant?.GrowthPerTick} | GrowthRate: {internalPlant?.GrowthRate}");
