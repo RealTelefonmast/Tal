@@ -65,7 +65,7 @@
 			<isEdifice>false</isEdifice>
 			<ai_chillDestination>false</ai_chillDestination>
 			<defaultPlantToGrow>TalMozuuk</defaultPlantToGrow>
-			<sowTag>Hydroponic</sowTag>
+			<sowTag>Water</sowTag>
 			<buildingTags>
 				<li>Production</li>
 			</buildingTags>
@@ -75,6 +75,13 @@
 				<graphicClass>VilousTal.VTGraphic_LinkedSelf</graphicClass>
 			</blueprintGraphicData>
 		</building>
+	</VilousTal.VTThingDef>
+	
+	<VilousTal.VTThingDef ParentName="BuildingBase_Tal">
+		<defName>DryingRack</defName>
+		<label>drying rack</label>
+		<thingClass>VilousTal.Building_DryingRack</thingClass>
+		
 	</VilousTal.VTThingDef>
 
 </Defs>
