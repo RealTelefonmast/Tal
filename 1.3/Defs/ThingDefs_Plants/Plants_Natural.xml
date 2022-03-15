@@ -4,7 +4,7 @@
 	<ThingDef ParentName="PlantBase">
 		<defName>TalMozuuk</defName>
 		<label>mozuuk</label>
-		<description>Mozuuk has a similar appearance to both common grass and Earth seaweeds like cladosiphon okamuranus, and purple tones as common Talyxian plants that have no chlorophyll. It is classified as a Talyxian species of plant, but is harmless to Eltus people.</description>
+		<description>A talyxian organism that is similar to edible seaweed, grass, and smokeleaf.</description>
 		<statBases>
 			<MaxHitPoints>85</MaxHitPoints>
 			<Nutrition>0.175</Nutrition>
