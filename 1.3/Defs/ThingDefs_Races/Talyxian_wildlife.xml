@@ -180,6 +180,7 @@
     <description>A skeletal creature that grows a heat resistant silk. Has a very poor meat yield.</description>
     <statBases>
       <MoveSpeed>3.5</MoveSpeed>
+	  <herdAnimal>true</herdAnimal>
       <ComfyTemperatureMin>-5</ComfyTemperatureMin>
 	  <ComfyTemperatureMax>75</ComfyTemperatureMax>
 	  <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
