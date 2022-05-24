@@ -33,6 +33,8 @@
     <PackageReference Include="TaskPubliciser" Version="1.0.3" />
 
     <PackageReference Include="Microsoft.NETCore.Platforms" Version="*" />
+
+    <PackageReference Include="TeleCore" Version="1.0.12" ExcludeAssets="runtime"/>
     <PackageReference Include="UnlimitedHugs.Rimworld.HugsLib" Version="*" ExcludeAssets="runtime" />
     <PackageReference Include="RimWorld.MultiplayerAPI" Version="*" ExcludeAssets="runtime" />
   </ItemGroup>

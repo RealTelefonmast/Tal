@@ -8,8 +8,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Pawn/Animal/Talgoat/Call</clipFolderPath>
-			<clipFolderPath>Pawn/Animal/Talgoat/Call2</clipFolderPath>
+            <clipFolderPath>Pawn/Animal/Talgoat/Calls</clipFolderPath>
           </li>
         </grains>
         <volumeRange>21~28</volumeRange>
@@ -24,8 +23,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Pawn/Animal/Talgoat/Call2</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/Animal/Talgoat/Calls/Call2</clipPath>
           </li>
         </grains>
         <volumeRange>15~15</volumeRange>
@@ -41,8 +40,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Pawn/Animal/Talgoat/Death</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/Animal/Talgoat/Death</clipPath>
           </li>
         </grains>
         <volumeRange>18.04878~18.04878</volumeRange>
@@ -57,8 +56,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Pawn/Animal/Talgoat/Pain</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/Animal/Talgoat/Pain</clipPath>
           </li>
         </grains>
         <volumeRange>13.5122~13.5122</volumeRange>
