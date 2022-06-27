@@ -96,6 +96,47 @@
 		</plant>
 	</ThingDef>
 	
+	<ThingDef ParentName="PlantBase">
+		<defName>TalGrass</defName>
+		<label>tal grass</label>
+		<description>N/A</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Nutrition>0.150</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plants/Tal_grass</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shaderType>TransparentPlant</shaderType>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<plant>
+			<dieIfLeafless>false</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<growDays>6</growDays>
+			<visualSizeRange>0.3~0.8</visualSizeRange>
+			<!-- Not meant to spawn naturall - yet
+			<wildBiomes>
+				<Desert>25</Desert>
+				<TemperateForest>0.25</TemperateForest>
+				<AridShrubland>2</AridShrubland>
+			</wildBiomes>
+			<wildClusterRadius>4</wildClusterRadius>
+			<wildClusterWeight>200</wildClusterWeight>
+			<wildOrder>2</wildOrder>
+			-->
+			
+			<harvestWork>65</harvestWork>
+			<dieFromToxicFallout>false</dieFromToxicFallout>
+			<dieIfNoSunlight>false</dieIfNoSunlight>
+			<fertilityMin>0.1</fertilityMin>
+			<fertilitySensitivity>0.05</fertilitySensitivity>
+			<topWindExposure>0.02</topWindExposure>
+		</plant>
+	</ThingDef>
+	
 	<!-- Trees -->
 	<ThingDef ParentName="TreeBase">
 		<defName>TreeHoncystis</defName>

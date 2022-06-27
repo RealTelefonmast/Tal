@@ -97,6 +97,7 @@
 		</baseWeatherCommonalities>
 		<wildPlants>
 			<Plant_Grass>5.0</Plant_Grass>
+			<TalGrass>5.0</TalGrass>
 			<TalCattail>2.0</TalCattail>
 			<TalMozuuk>0.5</TalMozuuk>
 			<TreeHoncystis>0.5</TreeHoncystis>
