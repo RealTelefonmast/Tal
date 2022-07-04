@@ -892,6 +892,12 @@
     <defName>HandstandSnail</defName>
     <label>handstand snail</label>
     <race>HandstandSnail</race>
+	<alternateGraphicChance>0.87</alternateGraphicChance>
+	<alternateGraphics>
+      <li><color>(0.498,0,0,1)</color></li>
+      <li><color>(0.333,0.333,0.333,1)</color></li>
+	  <li><color>(0.498,0,0.431,1)</color></li>
+    </alternateGraphics>
     <combatPower>1</combatPower>
     <ecoSystemWeight>0.20</ecoSystemWeight>
 	
