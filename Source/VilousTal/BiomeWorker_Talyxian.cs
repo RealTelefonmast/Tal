@@ -17,17 +17,13 @@ namespace VilousTal
             {
                 return -100f;
             }
-            if (tile.temperature < -10f)
-            {
-                return 0f;
-            }
-            if (tile.rainfall < 600f)
+            if (tile.temperature < 20)
             {
                 return 0f;
             }
 
-            var val = 15f + (tile.temperature - 7f) + (tile.rainfall - 600f) / 180f;
-            return Rand.Chance(0.5f) ? val + 999 : val;
+            //var val = 15f + (tile.temperature - 7f) + (tile.rainfall - 600f) / 180f;
+            return 8 + tile.temperature + (tile.rainfall - 600) / 180;
 		}
     }
 }
