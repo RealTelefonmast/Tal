@@ -3,12 +3,12 @@
 
 	<BiomeDef>
 		<defName>Talyxian_Wasteland</defName>
-		<label>talyxian wasteland</label>
-		<description>N/A</description>
+		<label>talyxian Forest</label>
+		<description>A strange and dangerous forest filled with life, with clearings of small deserts. The "plants" of this biome are actually sessile animals. </description>
 		<implemented>true</implemented>
 		<workerClass>VilousTal.BiomeWorker_Talyxian</workerClass>
 		<animalDensity>3.7</animalDensity>
-		<plantDensity>0.65</plantDensity>
+		<plantDensity>0.8</plantDensity>
 		<settlementSelectionWeight>1</settlementSelectionWeight>
 		<movementDifficulty>1</movementDifficulty>
 		<texture>World/Biomes/TalyxianBiome</texture>
@@ -105,17 +105,18 @@
 		</wildPlants>
 		<wildAnimals>
 			<SnailCow>0.1</SnailCow>
-			<TalyxianGoat>0.7</TalyxianGoat>
+			<TalyxianGoat>0.9</TalyxianGoat>
 			<TalyxianDog>0.15</TalyxianDog>
 			<TalyxianStalker>0.1</TalyxianStalker>
 			<UrchinCow>0.1</UrchinCow>
 			<HouseMite>1.2</HouseMite>
+			<Odei>1</Odei>
 			<HandstandSnail>0.5</HandstandSnail>
-			<TalyxianWolf>0.1</TalyxianWolf>
+			<TalyxianWolf>0.05</TalyxianWolf>
 		</wildAnimals>
 		<allowedPackAnimals>
 			<li>UrchinCow</li>
-			<li>TalyxianGoat</li>
+			<li>SnailCow</li>
 		</allowedPackAnimals>
 	</BiomeDef>
 
