@@ -803,7 +803,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Odei/Dessicated_Odei</texPath>
-          <drawSize>0.1</drawSize>
+          <drawSize>0.8666</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
@@ -817,7 +817,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Odei/Dessicated_Odei</texPath>
-          <drawSize>1.2</drawSize>
+          <drawSize>1</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
