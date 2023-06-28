@@ -127,7 +127,6 @@
 			<wildClusterWeight>200</wildClusterWeight>
 			<wildOrder>2</wildOrder>
 			-->
-			
 			<harvestWork>65</harvestWork>
 			<dieFromToxicFallout>false</dieFromToxicFallout>
 			<dieIfNoSunlight>false</dieIfNoSunlight>

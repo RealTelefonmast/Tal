@@ -1,0 +1,223 @@
+Mono path[0] = 'C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Managed'
+Mono config path = 'C:/Program Files (x86)/Steam/steamapps/common/RimWorld/MonoBleedingEdge/etc'
+Initialize engine version: 2019.4.30f1 (e8c891080a1f)
+[Subsystems] Discovering subsystems at path C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1080 (ID=0x1b80)
+    Vendor:   
+    VRAM:     8072 MB
+    Driver:   31.0.15.3129
+Begin MonoManager ReloadAssembly
+- Completed reload, in  0.115 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.806900 ms
+RimWorld 1.4.3704 rev896
+Mod  is missing supported versions list in About.xml! (example: <supportedVersions><li>1.0</li></supportedVersions>) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Mod Missions-Objectives is missing packageId in About.xml! (example: <packageId>AuthorName.ModName.Specific</packageId>) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Mod Story Framework is missing packageId in About.xml! (example: <packageId>AuthorName.ModName.Specific</packageId>) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Mod Story Framework BRUH is missing packageId in About.xml! (example: <packageId>AuthorName.ModName.Specific</packageId>) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E12068D070.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E1205696A0.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E1204435C0.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E1214C7040.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E120804900.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E12081D510.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E1208376D0.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E120889F80.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E1208ADB40.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E1208C9FE0.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E1208CF660.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E120AC9E30.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E120B0C240.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E120BE5680.dll
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E12210C170.dll
+<color=#00FFFFFF>[TELE]</color> [1.0.1.0] - Init
+[Tal] - Init
+XML error: Could not register node named "BaseTalSergalPawnKind" in mod VilousWildlife.Ammonite616 because this name is already used in this mod. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+<color=#2BBDFFFF>[TELE]</color> EntrySong is already registered. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+<color=#2BBDFFFF>[TELE]</color> EndCreditsSong is already registered. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+<color=#2BBDFFFF>[TELE]</color> ArchonexusVictorySong is already registered. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+XML error: <baseRecruitDifficulty>0.01</baseRecruitDifficulty> doesn't correspond to any field in type PawnKindDef. Context: <PawnKindDef ParentName="BaseTalSergalPawnKind"><race>TalNevrean</race><combatPower>26</combatPower><baseRecruitDifficulty>0.01</baseRecruitDifficulty><isFighter>false</isFighter><apparelIgnoreSeasons>false</apparelIgnoreSeasons><forceNormalGearQuality>false</forceNormalGearQuality><defName>NevreanColonist</defName><label>colonist</label><defaultFactionType>PlayerColony</defaultFactionType><apparelTags><li>IndustrialBasic</li></apparelTags><initialWillRange>20~30</initialWillRange><initialResistanceRange>17~27</initialResistanceRange><apparelMoney><min>0</min><max>0</max></apparelMoney><backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality></PawnKindDef> 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+XML error: <baseRecruitDifficulty>0.01</baseRecruitDifficulty> doesn't correspond to any field in type PawnKindDef. Context: <PawnKindDef ParentName="BaseTalSergalPawnKind"><race>TalNevrean</race><combatPower>26</combatPower><baseRecruitDifficulty>0.01</baseRecruitDifficulty><isFighter>false</isFighter><apparelIgnoreSeasons>false</apparelIgnoreSeasons><forceNormalGearQuality>false</forceNormalGearQuality><defName>SergalColonist</defName><label>colonist</label><defaultFactionType>PlayerColony</defaultFactionType><apparelTags><li>IndustrialBasic</li></apparelTags><initialWillRange>20~30</initialWillRange><initialResistanceRange>17~27</initialResistanceRange><apparelMoney><min>0</min><max>0</max></apparelMoney><backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality></PawnKindDef> 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+XML error: <alienbodytypes><li>Male</li><li>Thin</li></alienbodytypes> doesn't correspond to any field in type AlienPartGenerator. Context: <alienPartGenerator><customPortraitHeadDrawSize>(0.9, 0.9)</customPortraitHeadDrawSize><customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize><headOffset>(-0.05, 0.1)</headOffset><borderScale>2</borderScale><atlasScale>2</atlasScale><colorChannels><li><name>skin</name><first Class="ColorGenerator_Options"><options><li><weight>20</weight><only>RGBA(0.50,0.25,0.10,1)</only></li><li><weight>20</weight><only>RGBA(0.65,0.65,0.65,1)</only></li><li><weight>20</weight><only>RGBA(0.4,0.4,0.4,1)</only></li><li><weight>5</weight><only>RGBA(0.30,0.75,1,1)</only></li><li><weight>14</weight><only>RGBA(0.80,0.51,0,1)</only></li><li><weight>14</weight><only>RGBA(0.28,0.40,0.50,1)</only></li><li><weight>7</weight><only>RGBA(0.2,0.2,0.2,1)</only></li><li><weight>7</weight><only>RGBA(0.45,0.28,0.08,1)</only></li><li><weight>7</weight><only>RGBA(0.81,0.7,0.81,1)</only></li><li><weight>7</weight><only>RGBA(0.65,0.5,0.4,1)</only></li><li><weight>7</weight><only>RGBA(0.33,0.35,0.64,1)</only></li><li><weight>7</weight><only>RGBA(0.56,0.5,0.5,1)</only></li><li><weight>16</weight><only>RGBA(0.2,0.34,0.76,1)</only></li></options></first></li><li><name>hair</name><first Class="ColorGenerator_Options"><options><li><weight>2</weight><only>RGBA(1,1,1,1)</only></li><li><weight>1</weight><only>RGBA(1,0.55,0,1)</only></li><li><weight>1</weight><only>RGBA(0,1,0.6,1)</only></li><li><weight>1</weight><only>RGBA(1,0.7,0,1)</only></li><li><weight>1</weight><only>RGBA(1,0,0,1)</only></li><li><weight>1</weight><only>RGBA(0,0,1,1)</only></li><li><weight>1</weight><only>RGBA(0.25,0.25,0.25,1)</only></li></options></first></li></colorChannels><alienbodytypes><li>Male</li><li>Thin</li></alienbodytypes><aliencrowntypes><li>Nevrean_Head</li></aliencrowntypes><useGenderedHeads>true</useGenderedHeads><useGenderedBodies>false</useGenderedBodies><bodyAddons><li><path>TalNevrean/Tail/Tail</path><bodyPart>TalSergalTail</bodyPart><inFrontOfBody>false</inFrontOfBody><defaultOffset>Tail</defaultOffset><drawnInBed>false</drawnInBed><colorChannel>skin</colorChannel><offsets><south><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.55)</Male><Thin>(-0.42,0.55)</Thin></bodyTypes></south><north><layerOffset>0.3</layerOffset><bodyTypes><Male>(0,0.55)</Male><Thin>(0,0.55)</Thin></bodyTypes></north><east><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.25)</Male><Thin>(-0.42,0.25)</Thin></bodyTypes></east></offsets></li></bodyAddons></alienPartGenerator> 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+XML error: <aliencrowntypes><li>Nevrean_Head</li></aliencrowntypes> doesn't correspond to any field in type AlienPartGenerator. Context: <alienPartGenerator><customPortraitHeadDrawSize>(0.9, 0.9)</customPortraitHeadDrawSize><customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize><headOffset>(-0.05, 0.1)</headOffset><borderScale>2</borderScale><atlasScale>2</atlasScale><colorChannels><li><name>skin</name><first Class="ColorGenerator_Options"><options><li><weight>20</weight><only>RGBA(0.50,0.25,0.10,1)</only></li><li><weight>20</weight><only>RGBA(0.65,0.65,0.65,1)</only></li><li><weight>20</weight><only>RGBA(0.4,0.4,0.4,1)</only></li><li><weight>5</weight><only>RGBA(0.30,0.75,1,1)</only></li><li><weight>14</weight><only>RGBA(0.80,0.51,0,1)</only></li><li><weight>14</weight><only>RGBA(0.28,0.40,0.50,1)</only></li><li><weight>7</weight><only>RGBA(0.2,0.2,0.2,1)</only></li><li><weight>7</weight><only>RGBA(0.45,0.28,0.08,1)</only></li><li><weight>7</weight><only>RGBA(0.81,0.7,0.81,1)</only></li><li><weight>7</weight><only>RGBA(0.65,0.5,0.4,1)</only></li><li><weight>7</weight><only>RGBA(0.33,0.35,0.64,1)</only></li><li><weight>7</weight><only>RGBA(0.56,0.5,0.5,1)</only></li><li><weight>16</weight><only>RGBA(0.2,0.34,0.76,1)</only></li></options></first></li><li><name>hair</name><first Class="ColorGenerator_Options"><options><li><weight>2</weight><only>RGBA(1,1,1,1)</only></li><li><weight>1</weight><only>RGBA(1,0.55,0,1)</only></li><li><weight>1</weight><only>RGBA(0,1,0.6,1)</only></li><li><weight>1</weight><only>RGBA(1,0.7,0,1)</only></li><li><weight>1</weight><only>RGBA(1,0,0,1)</only></li><li><weight>1</weight><only>RGBA(0,0,1,1)</only></li><li><weight>1</weight><only>RGBA(0.25,0.25,0.25,1)</only></li></options></first></li></colorChannels><alienbodytypes><li>Male</li><li>Thin</li></alienbodytypes><aliencrowntypes><li>Nevrean_Head</li></aliencrowntypes><useGenderedHeads>true</useGenderedHeads><useGenderedBodies>false</useGenderedBodies><bodyAddons><li><path>TalNevrean/Tail/Tail</path><bodyPart>TalSergalTail</bodyPart><inFrontOfBody>false</inFrontOfBody><defaultOffset>Tail</defaultOffset><drawnInBed>false</drawnInBed><colorChannel>skin</colorChannel><offsets><south><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.55)</Male><Thin>(-0.42,0.55)</Thin></bodyTypes></south><north><layerOffset>0.3</layerOffset><bodyTypes><Male>(0,0.55)</Male><Thin>(0,0.55)</Thin></bodyTypes></north><east><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.25)</Male><Thin>(-0.42,0.25)</Thin></bodyTypes></east></offsets></li></bodyAddons></alienPartGenerator> 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+XML error: <useGenderedHeads>true</useGenderedHeads> doesn't correspond to any field in type AlienPartGenerator. Context: <alienPartGenerator><customPortraitHeadDrawSize>(0.9, 0.9)</customPortraitHeadDrawSize><customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize><headOffset>(-0.05, 0.1)</headOffset><borderScale>2</borderScale><atlasScale>2</atlasScale><colorChannels><li><name>skin</name><first Class="ColorGenerator_Options"><options><li><weight>20</weight><only>RGBA(0.50,0.25,0.10,1)</only></li><li><weight>20</weight><only>RGBA(0.65,0.65,0.65,1)</only></li><li><weight>20</weight><only>RGBA(0.4,0.4,0.4,1)</only></li><li><weight>5</weight><only>RGBA(0.30,0.75,1,1)</only></li><li><weight>14</weight><only>RGBA(0.80,0.51,0,1)</only></li><li><weight>14</weight><only>RGBA(0.28,0.40,0.50,1)</only></li><li><weight>7</weight><only>RGBA(0.2,0.2,0.2,1)</only></li><li><weight>7</weight><only>RGBA(0.45,0.28,0.08,1)</only></li><li><weight>7</weight><only>RGBA(0.81,0.7,0.81,1)</only></li><li><weight>7</weight><only>RGBA(0.65,0.5,0.4,1)</only></li><li><weight>7</weight><only>RGBA(0.33,0.35,0.64,1)</only></li><li><weight>7</weight><only>RGBA(0.56,0.5,0.5,1)</only></li><li><weight>16</weight><only>RGBA(0.2,0.34,0.76,1)</only></li></options></first></li><li><name>hair</name><first Class="ColorGenerator_Options"><options><li><weight>2</weight><only>RGBA(1,1,1,1)</only></li><li><weight>1</weight><only>RGBA(1,0.55,0,1)</only></li><li><weight>1</weight><only>RGBA(0,1,0.6,1)</only></li><li><weight>1</weight><only>RGBA(1,0.7,0,1)</only></li><li><weight>1</weight><only>RGBA(1,0,0,1)</only></li><li><weight>1</weight><only>RGBA(0,0,1,1)</only></li><li><weight>1</weight><only>RGBA(0.25,0.25,0.25,1)</only></li></options></first></li></colorChannels><alienbodytypes><li>Male</li><li>Thin</li></alienbodytypes><aliencrowntypes><li>Nevrean_Head</li></aliencrowntypes><useGenderedHeads>true</useGenderedHeads><useGenderedBodies>false</useGenderedBodies><bodyAddons><li><path>TalNevrean/Tail/Tail</path><bodyPart>TalSergalTail</bodyPart><inFrontOfBody>false</inFrontOfBody><defaultOffset>Tail</defaultOffset><drawnInBed>false</drawnInBed><colorChannel>skin</colorChannel><offsets><south><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.55)</Male><Thin>(-0.42,0.55)</Thin></bodyTypes></south><north><layerOffset>0.3</layerOffset><bodyTypes><Male>(0,0.55)</Male><Thin>(0,0.55)</Thin></bodyTypes></north><east><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.25)</Male><Thin>(-0.42,0.25)</Thin></bodyTypes></east></offsets></li></bodyAddons></alienPartGenerator> 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+XML error: <useGenderedBodies>false</useGenderedBodies> doesn't correspond to any field in type AlienPartGenerator. Context: <alienPartGenerator><customPortraitHeadDrawSize>(0.9, 0.9)</customPortraitHeadDrawSize><customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize><headOffset>(-0.05, 0.1)</headOffset><borderScale>2</borderScale><atlasScale>2</atlasScale><colorChannels><li><name>skin</name><first Class="ColorGenerator_Options"><options><li><weight>20</weight><only>RGBA(0.50,0.25,0.10,1)</only></li><li><weight>20</weight><only>RGBA(0.65,0.65,0.65,1)</only></li><li><weight>20</weight><only>RGBA(0.4,0.4,0.4,1)</only></li><li><weight>5</weight><only>RGBA(0.30,0.75,1,1)</only></li><li><weight>14</weight><only>RGBA(0.80,0.51,0,1)</only></li><li><weight>14</weight><only>RGBA(0.28,0.40,0.50,1)</only></li><li><weight>7</weight><only>RGBA(0.2,0.2,0.2,1)</only></li><li><weight>7</weight><only>RGBA(0.45,0.28,0.08,1)</only></li><li><weight>7</weight><only>RGBA(0.81,0.7,0.81,1)</only></li><li><weight>7</weight><only>RGBA(0.65,0.5,0.4,1)</only></li><li><weight>7</weight><only>RGBA(0.33,0.35,0.64,1)</only></li><li><weight>7</weight><only>RGBA(0.56,0.5,0.5,1)</only></li><li><weight>16</weight><only>RGBA(0.2,0.34,0.76,1)</only></li></options></first></li><li><name>hair</name><first Class="ColorGenerator_Options"><options><li><weight>2</weight><only>RGBA(1,1,1,1)</only></li><li><weight>1</weight><only>RGBA(1,0.55,0,1)</only></li><li><weight>1</weight><only>RGBA(0,1,0.6,1)</only></li><li><weight>1</weight><only>RGBA(1,0.7,0,1)</only></li><li><weight>1</weight><only>RGBA(1,0,0,1)</only></li><li><weight>1</weight><only>RGBA(0,0,1,1)</only></li><li><weight>1</weight><only>RGBA(0.25,0.25,0.25,1)</only></li></options></first></li></colorChannels><alienbodytypes><li>Male</li><li>Thin</li></alienbodytypes><aliencrowntypes><li>Nevrean_Head</li></aliencrowntypes><useGenderedHeads>true</useGenderedHeads><useGenderedBodies>false</useGenderedBodies><bodyAddons><li><path>TalNevrean/Tail/Tail</path><bodyPart>TalSergalTail</bodyPart><inFrontOfBody>false</inFrontOfBody><defaultOffset>Tail</defaultOffset><drawnInBed>false</drawnInBed><colorChannel>skin</colorChannel><offsets><south><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.55)</Male><Thin>(-0.42,0.55)</Thin></bodyTypes></south><north><layerOffset>0.3</layerOffset><bodyTypes><Male>(0,0.55)</Male><Thin>(0,0.55)</Thin></bodyTypes></north><east><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.25)</Male><Thin>(-0.42,0.25)</Thin></bodyTypes></east></offsets></li></bodyAddons></alienPartGenerator> 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+XML error: <li><head>TalNevrean/Head/</head><body>TalNevrean/Body/</body><skull>TalSergal/Skull/Skull</skull></li> doesn't correspond to any field in type GraphicPaths. Context: <graphicPaths><li><head>TalNevrean/Head/</head><body>TalNevrean/Body/</body><skull>TalSergal/Skull/Skull</skull></li></graphicPaths> 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+XML error: <alienbodytypes><li>Male</li><li>Thin</li></alienbodytypes> doesn't correspond to any field in type AlienPartGenerator. Context: <alienPartGenerator><customPortraitHeadDrawSize>(0.9, 0.9)</customPortraitHeadDrawSize><customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize><headOffset>(-0.05, 0.1)</headOffset><borderScale>2</borderScale><atlasScale>2</atlasScale><colorChannels><li><name>skin</name><first Class="ColorGenerator_Options"><options><li><weight>20</weight><only>RGBA(0.50,0.25,0.10,1)</only></li><li><weight>20</weight><only>RGBA(0.65,0.65,0.65,1)</only></li><li><weight>20</weight><only>RGBA(0.4,0.4,0.4,1)</only></li><li><weight>5</weight><only>RGBA(0.30,0.75,1,1)</only></li><li><weight>14</weight><only>RGBA(0.80,0.51,0,1)</only></li><li><weight>14</weight><only>RGBA(0.28,0.40,0.50,1)</only></li><li><weight>7</weight><only>RGBA(0.2,0.2,0.2,1)</only></li><li><weight>7</weight><only>RGBA(0.45,0.28,0.08,1)</only></li><li><weight>7</weight><only>RGBA(0.81,0.7,0.81,1)</only></li><li><weight>7</weight><only>RGBA(0.65,0.5,0.4,1)</only></li><li><weight>7</weight><only>RGBA(0.33,0.35,0.64,1)</only></li><li><weight>7</weight><only>RGBA(0.56,0.5,0.5,1)</only></li><li><weight>16</weight><only>RGBA(0.2,0.34,0.76,1)</only></li></options></first></li><li><name>hair</name><first Class="ColorGenerator_Options"><options><li><weight>2</weight><only>RGBA(1,1,1,1)</only></li><li><weight>1</weight><only>RGBA(1,0.55,0,1)</only></li><li><weight>1</weight><only>RGBA(0,1,0.6,1)</only></li><li><weight>1</weight><only>RGBA(1,0.7,0,1)</only></li><li><weight>1</weight><only>RGBA(1,0,0,1)</only></li><li><weight>1</weight><only>RGBA(0,0,1,1)</only></li><li><weight>1</weight><only>RGBA(0.25,0.25,0.25,1)</only></li></options></first></li></colorChannels><alienbodytypes><li>Male</li><li>Thin</li></alienbodytypes><aliencrowntypes><li>Sergal_Head</li><li>Sergal_Head_A</li><li>Sergal_Head_B</li><li>Sergal_Head_C</li><li>Sergal_Head_D</li><li>Sergal_Head_E</li><li>Sergal_Head_F</li></aliencrowntypes><useGenderedHeads>true</useGenderedHeads><useGenderedBodies>false</useGenderedBodies><bodyAddons><li><path>TalSergal/Tail/Tail</path><bodyPart>TalSergalTail</bodyPart><inFrontOfBody>false</inFrontOfBody><defaultOffset>Tail</defaultOffset><drawnInBed>false</drawnInBed><colorChannel>skin</colorChannel><offsets><south><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.55)</Male><Thin>(-0.42,0.55)</Thin></bodyTypes></south><north><layerOffset>0.3</layerOffset><bodyTypes><Male>(0,0.55)</Male><Thin>(0,0.55)</Thin></bodyTypes></north><east><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.25)</Male><Thin>(-0.42,0.25)</Thin></bodyTypes></east></offsets></li></bodyAddons></alienPartGenerator> 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+XML error: <aliencrowntypes><li>Sergal_Head</li><li>Sergal_Head_A</li><li>Sergal_Head_B</li><li>Sergal_Head_C</li><li>Sergal_Head_D</li><li>Sergal_Head_E</li><li>Sergal_Head_F</li></aliencrowntypes> doesn't correspond to any field in type AlienPartGenerator. Context: <alienPartGenerator><customPortraitHeadDrawSize>(0.9, 0.9)</customPortraitHeadDrawSize><customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize><headOffset>(-0.05, 0.1)</headOffset><borderScale>2</borderScale><atlasScale>2</atlasScale><colorChannels><li><name>skin</name><first Class="ColorGenerator_Options"><options><li><weight>20</weight><only>RGBA(0.50,0.25,0.10,1)</only></li><li><weight>20</weight><only>RGBA(0.65,0.65,0.65,1)</only></li><li><weight>20</weight><only>RGBA(0.4,0.4,0.4,1)</only></li><li><weight>5</weight><only>RGBA(0.30,0.75,1,1)</only></li><li><weight>14</weight><only>RGBA(0.80,0.51,0,1)</only></li><li><weight>14</weight><only>RGBA(0.28,0.40,0.50,1)</only></li><li><weight>7</weight><only>RGBA(0.2,0.2,0.2,1)</only></li><li><weight>7</weight><only>RGBA(0.45,0.28,0.08,1)</only></li><li><weight>7</weight><only>RGBA(0.81,0.7,0.81,1)</only></li><li><weight>7</weight><only>RGBA(0.65,0.5,0.4,1)</only></li><li><weight>7</weight><only>RGBA(0.33,0.35,0.64,1)</only></li><li><weight>7</weight><only>RGBA(0.56,0.5,0.5,1)</only></li><li><weight>16</weight><only>RGBA(0.2,0.34,0.76,1)</only></li></options></first></li><li><name>hair</name><first Class="ColorGenerator_Options"><options><li><weight>2</weight><only>RGBA(1,1,1,1)</only></li><li><weight>1</weight><only>RGBA(1,0.55,0,1)</only></li><li><weight>1</weight><only>RGBA(0,1,0.6,1)</only></li><li><weight>1</weight><only>RGBA(1,0.7,0,1)</only></li><li><weight>1</weight><only>RGBA(1,0,0,1)</only></li><li><weight>1</weight><only>RGBA(0,0,1,1)</only></li><li><weight>1</weight><only>RGBA(0.25,0.25,0.25,1)</only></li></options></first></li></colorChannels><alienbodytypes><li>Male</li><li>Thin</li></alienbodytypes><aliencrowntypes><li>Sergal_Head</li><li>Sergal_Head_A</li><li>Sergal_Head_B</li><li>Sergal_Head_C</li><li>Sergal_Head_D</li><li>Sergal_Head_E</li><li>Sergal_Head_F</li></aliencrowntypes><useGenderedHeads>true</useGenderedHeads><useGenderedBodies>false</useGenderedBodies><bodyAddons><li><path>TalSergal/Tail/Tail</path><bodyPart>TalSergalTail</bodyPart><inFrontOfBody>false</inFrontOfBody><defaultOffset>Tail</defaultOffset><drawnInBed>false</drawnInBed><colorChannel>skin</colorChannel><offsets><south><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.55)</Male><Thin>(-0.42,0.55)</Thin></bodyTypes></south><north><layerOffset>0.3</layerOffset><bodyTypes><Male>(0,0.55)</Male><Thin>(0,0.55)</Thin></bodyTypes></north><east><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.25)</Male><Thin>(-0.42,0.25)</Thin></bodyTypes></east></offsets></li></bodyAddons></alienPartGenerator> 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+XML error: <useGenderedHeads>true</useGenderedHeads> doesn't correspond to any field in type AlienPartGenerator. Context: <alienPartGenerator><customPortraitHeadDrawSize>(0.9, 0.9)</customPortraitHeadDrawSize><customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize><headOffset>(-0.05, 0.1)</headOffset><borderScale>2</borderScale><atlasScale>2</atlasScale><colorChannels><li><name>skin</name><first Class="ColorGenerator_Options"><options><li><weight>20</weight><only>RGBA(0.50,0.25,0.10,1)</only></li><li><weight>20</weight><only>RGBA(0.65,0.65,0.65,1)</only></li><li><weight>20</weight><only>RGBA(0.4,0.4,0.4,1)</only></li><li><weight>5</weight><only>RGBA(0.30,0.75,1,1)</only></li><li><weight>14</weight><only>RGBA(0.80,0.51,0,1)</only></li><li><weight>14</weight><only>RGBA(0.28,0.40,0.50,1)</only></li><li><weight>7</weight><only>RGBA(0.2,0.2,0.2,1)</only></li><li><weight>7</weight><only>RGBA(0.45,0.28,0.08,1)</only></li><li><weight>7</weight><only>RGBA(0.81,0.7,0.81,1)</only></li><li><weight>7</weight><only>RGBA(0.65,0.5,0.4,1)</only></li><li><weight>7</weight><only>RGBA(0.33,0.35,0.64,1)</only></li><li><weight>7</weight><only>RGBA(0.56,0.5,0.5,1)</only></li><li><weight>16</weight><only>RGBA(0.2,0.34,0.76,1)</only></li></options></first></li><li><name>hair</name><first Class="ColorGenerator_Options"><options><li><weight>2</weight><only>RGBA(1,1,1,1)</only></li><li><weight>1</weight><only>RGBA(1,0.55,0,1)</only></li><li><weight>1</weight><only>RGBA(0,1,0.6,1)</only></li><li><weight>1</weight><only>RGBA(1,0.7,0,1)</only></li><li><weight>1</weight><only>RGBA(1,0,0,1)</only></li><li><weight>1</weight><only>RGBA(0,0,1,1)</only></li><li><weight>1</weight><only>RGBA(0.25,0.25,0.25,1)</only></li></options></first></li></colorChannels><alienbodytypes><li>Male</li><li>Thin</li></alienbodytypes><aliencrowntypes><li>Sergal_Head</li><li>Sergal_Head_A</li><li>Sergal_Head_B</li><li>Sergal_Head_C</li><li>Sergal_Head_D</li><li>Sergal_Head_E</li><li>Sergal_Head_F</li></aliencrowntypes><useGenderedHeads>true</useGenderedHeads><useGenderedBodies>false</useGenderedBodies><bodyAddons><li><path>TalSergal/Tail/Tail</path><bodyPart>TalSergalTail</bodyPart><inFrontOfBody>false</inFrontOfBody><defaultOffset>Tail</defaultOffset><drawnInBed>false</drawnInBed><colorChannel>skin</colorChannel><offsets><south><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.55)</Male><Thin>(-0.42,0.55)</Thin></bodyTypes></south><north><layerOffset>0.3</layerOffset><bodyTypes><Male>(0,0.55)</Male><Thin>(0,0.55)</Thin></bodyTypes></north><east><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.25)</Male><Thin>(-0.42,0.25)</Thin></bodyTypes></east></offsets></li></bodyAddons></alienPartGenerator> 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+XML error: <useGenderedBodies>false</useGenderedBodies> doesn't correspond to any field in type AlienPartGenerator. Context: <alienPartGenerator><customPortraitHeadDrawSize>(0.9, 0.9)</customPortraitHeadDrawSize><customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize><headOffset>(-0.05, 0.1)</headOffset><borderScale>2</borderScale><atlasScale>2</atlasScale><colorChannels><li><name>skin</name><first Class="ColorGenerator_Options"><options><li><weight>20</weight><only>RGBA(0.50,0.25,0.10,1)</only></li><li><weight>20</weight><only>RGBA(0.65,0.65,0.65,1)</only></li><li><weight>20</weight><only>RGBA(0.4,0.4,0.4,1)</only></li><li><weight>5</weight><only>RGBA(0.30,0.75,1,1)</only></li><li><weight>14</weight><only>RGBA(0.80,0.51,0,1)</only></li><li><weight>14</weight><only>RGBA(0.28,0.40,0.50,1)</only></li><li><weight>7</weight><only>RGBA(0.2,0.2,0.2,1)</only></li><li><weight>7</weight><only>RGBA(0.45,0.28,0.08,1)</only></li><li><weight>7</weight><only>RGBA(0.81,0.7,0.81,1)</only></li><li><weight>7</weight><only>RGBA(0.65,0.5,0.4,1)</only></li><li><weight>7</weight><only>RGBA(0.33,0.35,0.64,1)</only></li><li><weight>7</weight><only>RGBA(0.56,0.5,0.5,1)</only></li><li><weight>16</weight><only>RGBA(0.2,0.34,0.76,1)</only></li></options></first></li><li><name>hair</name><first Class="ColorGenerator_Options"><options><li><weight>2</weight><only>RGBA(1,1,1,1)</only></li><li><weight>1</weight><only>RGBA(1,0.55,0,1)</only></li><li><weight>1</weight><only>RGBA(0,1,0.6,1)</only></li><li><weight>1</weight><only>RGBA(1,0.7,0,1)</only></li><li><weight>1</weight><only>RGBA(1,0,0,1)</only></li><li><weight>1</weight><only>RGBA(0,0,1,1)</only></li><li><weight>1</weight><only>RGBA(0.25,0.25,0.25,1)</only></li></options></first></li></colorChannels><alienbodytypes><li>Male</li><li>Thin</li></alienbodytypes><aliencrowntypes><li>Sergal_Head</li><li>Sergal_Head_A</li><li>Sergal_Head_B</li><li>Sergal_Head_C</li><li>Sergal_Head_D</li><li>Sergal_Head_E</li><li>Sergal_Head_F</li></aliencrowntypes><useGenderedHeads>true</useGenderedHeads><useGenderedBodies>false</useGenderedBodies><bodyAddons><li><path>TalSergal/Tail/Tail</path><bodyPart>TalSergalTail</bodyPart><inFrontOfBody>false</inFrontOfBody><defaultOffset>Tail</defaultOffset><drawnInBed>false</drawnInBed><colorChannel>skin</colorChannel><offsets><south><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.55)</Male><Thin>(-0.42,0.55)</Thin></bodyTypes></south><north><layerOffset>0.3</layerOffset><bodyTypes><Male>(0,0.55)</Male><Thin>(0,0.55)</Thin></bodyTypes></north><east><layerOffset>-0.3</layerOffset><bodyTypes><Male>(-0.42,0.25)</Male><Thin>(-0.42,0.25)</Thin></bodyTypes></east></offsets></li></bodyAddons></alienPartGenerator> 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+XML error: <li><head>TalSergal/Head/</head><body>TalSergal/Body/</body><skull>TalSergal/Skull/Skull</skull></li> doesn't correspond to any field in type GraphicPaths. Context: <graphicPaths><li><head>TalSergal/Head/</head><body>TalSergal/Body/</body><skull>TalSergal/Skull/Skull</skull></li></graphicPaths> 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference to Verse.BodyPartGroupDef named mouth (wanter=groups) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference to Verse.ToolCapacityDef named Sharp (wanter=capacities) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference to Verse.ThingCategoryDef named shigu (wanter=thingCategories) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference to RimWorld.StuffCategoryDef named shigu (wanter=categories) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference: No RimWorld.LifeStageDef named HumanlikeToddler found to give to Verse.LifeStageAge Verse.LifeStageAge 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference to Verse.ToolCapacityDef named Sharp (wanter=capacities) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference: No Verse.BodyDef named TalNevrean found to give to Verse.RaceProperties Verse.RaceProperties 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference: No RimWorld.StatDef named researchSpeedFactor found to give to RimWorld.StatModifier (null stat) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference: No RimWorld.StatDef named HungerRateMultiplier found to give to RimWorld.StatModifier (null stat) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference to Verse.ToolCapacityDef named Sharp (wanter=capacities) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference to Verse.ThingCategoryDef named shigu (wanter=thingCategories) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference to Verse.ThingCategoryDef named shigu (wanter=thingCategories) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference: No RimWorld.LifeStageDef named HumanlikeToddler found to give to Verse.LifeStageAge Verse.LifeStageAge 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference: No RimWorld.FleshTypeDef named Nevrean_Flesh found to give to Verse.RaceProperties Verse.RaceProperties 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference: No RimWorld.StatDef named HungerRateMultiplier found to give to RimWorld.StatModifier (null stat) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference: No RimWorld.StatDef named researchSpeedFactor found to give to RimWorld.StatModifier (null stat) 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Could not resolve cross-reference: No RimWorld.FleshTypeDef named Sergal_Flesh found to give to Verse.RaceProperties Verse.RaceProperties 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in Echinoderm: no parts vulnerable to frostbite 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in Talyxian_Wasteland: description has trailing whitespace 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in TalNevrean: defines the stat base  more than once. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in TalNevrean: defines the stat base  more than once. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in TalSergal: defines the stat base  more than once. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in TalSergal: defines the stat base  more than once. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in TalNevrean: defines the stat base  more than once. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in TalNevrean: defines the stat base  more than once. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in TalNevrean: defines the stat base  more than once. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in TalNevrean: defines the stat base  more than once. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in TalSergal: defines the stat base  more than once. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in TalSergal: defines the stat base  more than once. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in TalSergal: defines the stat base  more than once. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Config error in TalSergal: defines the stat base  more than once. 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Collection cannot init: No textures found at path Things/Plants/Tal_grass 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+<color=#2BBDFFFF>[TELE]</color> Startup Init...
+<color=#2BBDFFFF>[TELE]</color> Multiplayer: Disabled
+<color=#29B573FF>[TELE-Debug]</color> Injectors: 
+<color=#2BBDFFFF>[TELE]</color> Def ID Database check - Loaded IDs: 12958 == 11218: False
+<color=#29B573FF>[TELE]</color> Startup Finished!
+<color=#29B573FF>[TELE]</color> TFind Ready!
+<color=#2BBDFFFF>[TELE]</color> AssetBundle Loaded: True
+<color=#2BBDFFFF>[TELE]</color> Could not load shader 'TextureBlend' 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+<color=#2BBDFFFF>[TELE]</color> Could not load shader 'FlowMapShader' 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+<color=#2BBDFFFF>[TELE]</color> Could not load shader 'FlowMapOnBlend' 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+<color=#2BBDFFFF>[TELE]</color> Could not load shader 'GasGridCompute' 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+<color=#2BBDFFFF>[TELE]</color> Could not load shader 'GlowFlooder' 
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
+
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Mono/data-000001E19A27C500.dll
+Alien race successfully completed 221 patches with harmony.
+<color=#2BBDFFFF>[TELE]</color> Starting TeleTickManager!
+Setting up 6 worker threads for Enlighten.
+  Thread -> id: 537c -> priority: 1 
+  Thread -> id: 3a00 -> priority: 1 
+  Thread -> id: 1778 -> priority: 1 
+  Thread -> id: 55f8 -> priority: 1 
+  Thread -> id: 4a20 -> priority: 1 
+  Thread -> id: 206c -> priority: 1 
