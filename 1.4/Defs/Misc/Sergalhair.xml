@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<StyleItemCategoryDef>
+		<defName>SergalHair</defName>
+		<label>sergal hair</label>
+	</StyleItemCategoryDef>
+
+	<HairDef>
+		<defName>TopmaneHair</defName>
+		<label>Topmane</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Topmane</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+
+	<HairDef>
+		<defName>Eyemark</defName>
+		<label>Eyemark</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Eyemark</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Cheekmark</defName>
+		<label>Cheekmark</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Cheekmark</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+
+	<HairDef>
+		<defName>Maxim</defName>
+		<label>Maxim</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Maxim</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Zyphir</defName>
+		<label>Zyphir</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Zyphir</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>DiamondHair</defName>
+		<label>Diamond</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Diamond</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>SergalBraids</defName>
+		<label>Braids</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Braids</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+
+	<HairDef>
+		<defName>Kitehair</defName>
+		<label>Kite</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Kite</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nohair</defName>
+		<label>Nohair</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Empty</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+	
+		<HairDef>
+		<defName>BasilbrowHair</defName>
+		<label>Basilbrow</label>
+		<styleGender>Any</styleGender>
+		<texPath>TalSergal/Hair/Basilbrow</texPath>
+		<category>SergalHair</category>
+		<styleTags>
+			<li>Sergalhair</li>
+		</styleTags>
+	</HairDef>
+
+</Defs>

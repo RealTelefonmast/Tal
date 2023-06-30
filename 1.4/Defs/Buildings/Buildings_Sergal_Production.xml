@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<VilousTal.VTThingDef ParentName="BuildingBase_Tal">
+		<defName>Aquaplanter</defName>
+		<label>aquaplanter</label>
+		<description>Makes the water plants grow.</description>
+		<designationCategory>Production</designationCategory>
+		<thingClass>VilousTal.Building_AquaPlanter</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<uiIconPath>Things/Building/Aquaplanter/Aquaplanter_Icon</uiIconPath>
+		<graphicData Inherit="false">
+			<texPath>Things/Building/Aquaplanter/Aquaplanter_Atlas</texPath>
+			<shaderType>CutoutComplex</shaderType>
+			<graphicClass>VilousTal.VTGraphic_LinkedSelf</graphicClass>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<extraGraphics>
+			<li>
+				<texPath>Things/Building/Aquaplanter/Aquaplanter_Water_Atlas</texPath>
+				<shaderType>TransparentPostLight</shaderType>
+				<graphicClass>VilousTal.VTGraphic_LinkedSelf</graphicClass>
+			</li>
+			<li>
+				<texPath>Things/Building/Aquaplanter/Aquaplanter_Atlas_Front</texPath>
+				<shaderType>CutoutComplex</shaderType>
+				<graphicClass>VilousTal.VTGraphic_LinkedSelf</graphicClass>
+			</li>
+		</extraGraphics>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>750</WorkToBuild>
+			<Flammability>0</Flammability>
+		</statBases>
+		<costList>
+			<VilousCeramic>5</VilousCeramic>
+		</costList>
+		<tickerType>Rare</tickerType>
+		<holdsRoof>false</holdsRoof>
+		<blockWind>false</blockWind>
+		<rotatable>false</rotatable>
+		<blockLight>false</blockLight>
+		<coversFloor>true</coversFloor>
+		<blockPlants>true</blockPlants>
+		<castEdgeShadows>true</castEdgeShadows>
+				
+		<neverMultiSelect>false</neverMultiSelect>
+		<passability>Impassable</passability>
+		
+		<fillPercent>0.45</fillPercent>
+		<fertility>2.8</fertility>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<staticSunShadowHeight>0.45</staticSunShadowHeight>
+
+		<building>
+			<isEdifice>false</isEdifice>
+			<ai_chillDestination>false</ai_chillDestination>
+			<defaultPlantToGrow>TalMozuuk</defaultPlantToGrow>
+			<sowTag>Water</sowTag>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Aquaplanter/Aquaplanter_Atlas</texPath>
+				<shaderType>EdgeDetect</shaderType>
+				<graphicClass>VilousTal.VTGraphic_LinkedSelf</graphicClass>
+			</blueprintGraphicData>
+		</building>
+	</VilousTal.VTThingDef>
+	
+	<VilousTal.VTThingDef ParentName="BuildingBase_Tal">
+		<defName>DryingRack</defName>
+		<label>drying rack</label>
+		<thingClass>VilousTal.Building_DryingRack</thingClass>
+		
+	</VilousTal.VTThingDef>
+
+</Defs>

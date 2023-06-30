@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef Abstract="True" Name="DeadSoilBase">
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>340</renderPrecedence>
+		<pathCost>30</pathCost>
+		<filthAcceptanceMask>
+			<li>Unnatural</li>
+		</filthAcceptanceMask>
+		<statBases>
+			<Beauty>-6</Beauty>
+			<Cleanliness>-3</Cleanliness>
+		</statBases>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>Diggable</li>
+		</affordances>
+		<tags>
+			<li>Talyxian</li>
+			<li>Soil</li>
+		</tags>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>0</fertility>
+		<takeFootprints>True</takeFootprints>
+		<avoidWander>True</avoidWander>
+		<extinguishesFire>True</extinguishesFire>
+		<extraDeteriorationFactor>1.75</extraDeteriorationFactor>
+	</TerrainDef>
+	
+</Defs>

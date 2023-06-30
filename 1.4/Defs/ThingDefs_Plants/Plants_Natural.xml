@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="PlantBase">
+		<defName>TalMozuuk</defName>
+		<label>mozuuk</label>
+		<description>A talyxian organism that is similar to edible seaweed, grass, and smokeleaf.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Nutrition>0.175</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plants/Mozuuk</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shaderType>TransparentPlant</shaderType>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<plant>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawMozuuk</harvestedThingDef>
+			<harvestYield>2</harvestYield>
+			<sowTags>
+				<li>Water</li>
+				<!--
+				<li>Ground</li>
+				<li>Hydroponic</li>
+				-->
+			</sowTags>
+			<growDays>3</growDays>
+			<visualSizeRange>0.3~0.8</visualSizeRange>
+			<purpose>Food</purpose>
+			<humanFoodPlant>true</humanFoodPlant>
+			<!-- Not meant to spawn naturall - yet
+			<wildBiomes>
+				<Desert>25</Desert>
+				<TemperateForest>0.25</TemperateForest>
+				<AridShrubland>2</AridShrubland>
+			</wildBiomes>
+			<wildClusterRadius>4</wildClusterRadius>
+			<wildClusterWeight>200</wildClusterWeight>
+			<wildOrder>2</wildOrder>
+			-->
+			
+			<!-- Mozuuk is very resilient-->
+			<harvestWork>65</harvestWork>
+			<dieFromToxicFallout>false</dieFromToxicFallout>
+			<dieIfNoSunlight>false</dieIfNoSunlight>
+			<fertilityMin>0.1</fertilityMin>
+			<fertilitySensitivity>0.05</fertilitySensitivity>
+			<topWindExposure>0.02</topWindExposure>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>TalCattail</defName>
+		<label>tal cattail</label>
+		<description>N/A</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Nutrition>0.175</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plants/Tal_Cattail</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shaderType>TransparentPlant</shaderType>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<plant>
+			<dieIfLeafless>false</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<growDays>6</growDays>
+			<visualSizeRange>0.3~0.8</visualSizeRange>
+			<!-- Not meant to spawn naturall - yet
+			<wildBiomes>
+				<Desert>25</Desert>
+				<TemperateForest>0.25</TemperateForest>
+				<AridShrubland>2</AridShrubland>
+			</wildBiomes>
+			<wildClusterRadius>4</wildClusterRadius>
+			<wildClusterWeight>200</wildClusterWeight>
+			<wildOrder>2</wildOrder>
+			-->
+			
+			<harvestWork>65</harvestWork>
+			<dieFromToxicFallout>false</dieFromToxicFallout>
+			<dieIfNoSunlight>false</dieIfNoSunlight>
+			<fertilityMin>0.1</fertilityMin>
+			<fertilitySensitivity>0.05</fertilitySensitivity>
+			<topWindExposure>0.02</topWindExposure>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>TalGrass</defName>
+		<label>tal grass</label>
+		<description>N/A</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Nutrition>0.150</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plants/Tal_grass</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shaderType>TransparentPlant</shaderType>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<plant>
+			<dieIfLeafless>false</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<growDays>6</growDays>
+			<visualSizeRange>0.3~0.8</visualSizeRange>
+			<!-- Not meant to spawn naturall - yet
+			<wildBiomes>
+				<Desert>25</Desert>
+				<TemperateForest>0.25</TemperateForest>
+				<AridShrubland>2</AridShrubland>
+			</wildBiomes>
+			<wildClusterRadius>4</wildClusterRadius>
+			<wildClusterWeight>200</wildClusterWeight>
+			<wildOrder>2</wildOrder>
+			-->
+			<harvestWork>65</harvestWork>
+			<dieFromToxicFallout>false</dieFromToxicFallout>
+			<dieIfNoSunlight>false</dieIfNoSunlight>
+			<fertilityMin>0.1</fertilityMin>
+			<fertilitySensitivity>0.05</fertilitySensitivity>
+			<topWindExposure>0.02</topWindExposure>
+		</plant>
+	</ThingDef>
+	
+	<!-- Trees -->
+	<ThingDef ParentName="TreeBase">
+		<defName>TreeHoncystis</defName>
+		<label>honcystis tree</label>
+		<description>N/A</description>
+		<graphicData>
+			<texPath>Things/Plants/Trees/Honcystis</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shadowData>
+				<volume>(0.2, 0.35, 0.13)</volume>
+				<offset>(-0.03,0,-0.44)</offset>
+			</shadowData>
+		</graphicData>
+		<statBases>
+			<Beauty>2</Beauty>
+			<BeautyOutdoors>2</BeautyOutdoors>
+		</statBases>
+		<plant>
+			<growDays>30</growDays>
+			<harvestWork>1400</harvestWork>
+			<harvestYield>46</harvestYield>
+			<wildClusterWeight>35</wildClusterWeight>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="TreeBase">
+		<defName>TreeOysterbirch</defName>
+		<label>oysterbirch tree</label>
+		<description>N/A</description>
+		<graphicData>
+			<texPath>Things/Plants/Trees/Oysterbirch</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shadowData>
+				<volume>(0.2, 0.35, 0.13)</volume>
+				<offset>(-0.03,0,-0.44)</offset>
+			</shadowData>
+		</graphicData>
+		<statBases>
+			<Beauty>2</Beauty>
+			<BeautyOutdoors>2</BeautyOutdoors>
+		</statBases>
+		<plant>
+			<growDays>30</growDays>
+			<harvestWork>1400</harvestWork>
+			<harvestYield>46</harvestYield>
+			<wildClusterWeight>35</wildClusterWeight>
+		</plant>
+	</ThingDef>
+	
+</Defs>

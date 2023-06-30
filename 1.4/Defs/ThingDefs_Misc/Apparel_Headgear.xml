@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="HatMakeableBase" >
+		<defName>Apparel_TalWorkerHat</defName>
+		<label>tal worker hat</label>
+		<description>Very cool hat for wedge-shaped heads.</description>
+		<recipeMaker>
+			<researchPrerequisite>ComplexClothing</researchPrerequisite>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Apparel/TalFarmerHat/TalFarmerHat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(0.9, 0.9)</drawSize>
+		</graphicData>
+		<costStuffCount>25</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToMake>1800</WorkToMake>
+			<Mass>0.14</Mass>
+			<StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>0.8</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<SocialImpact>0</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparel/TalFarmerHat/TalFarmerHat</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>Sergal</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>SergalWorker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<!--
+		<colorGenerator Class="ColorGenerator_Options">
+		<options>
+			<li>
+			<weight>10</weight>
+			<only>(0.9,0.54,0.15,1)</only>
+			</li>
+			<li>
+			<weight>15</weight>
+			<only>(0.9,0.6,0.18,1)</only>
+			</li>
+			<li>
+			<weight>20</weight>
+			<only>(0.9,0.42,0.23,1)</only>
+			</li>
+		</options>
+		</colorGenerator>
+		-->
+	</ThingDef>
+	
+</Defs>
