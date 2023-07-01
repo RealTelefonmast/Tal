@@ -8,8 +8,8 @@
       <MarketValue>1750</MarketValue>
       <MoveSpeed>7.7</MoveSpeed>
 	  <MeleeWeapon_CooldownMultiplier>1.2</MeleeWeapon_CooldownMultiplier>
-	  <researchSpeedFactor>0.8</researchSpeedFactor>
-	  <HungerRateMultiplier>1.2</HungerRateMultiplier>
+	  <ResearchSpeedFactor>0.8</ResearchSpeedFactor>
+	  <BedHungerRateFactor>1.2</BedHungerRateFactor>
 	  <ShootingAccuracyPawn>-2</ShootingAccuracyPawn>
 	  <MeleeDodgeChance>15</MeleeDodgeChance>
       <ComfyTemperatureMin>5</ComfyTemperatureMin>
@@ -106,10 +106,6 @@
         <li>
           <def>HumanlikeBaby</def>
           <minAge>0</minAge>
-        </li>
-        <li>
-          <def>HumanlikeToddler</def>
-          <minAge>1.2</minAge>
         </li>
         <li>
           <def>HumanlikeChild</def>
@@ -267,21 +263,30 @@
 						</first>
 					</li>
 				</colorChannels>
-				<alienbodytypes>
+				<bodyTypes>
 					<li>Male</li>
 					<li>Thin</li>
-				</alienbodytypes>
-				<aliencrowntypes>
-					<li>Sergal_Head</li>
-					<li>Sergal_Head_A</li>
-					<li>Sergal_Head_B</li>
-					<li>Sergal_Head_C</li>
-					<li>Sergal_Head_D</li>
-					<li>Sergal_Head_E</li>
-					<li>Sergal_Head_F</li>
-				</aliencrowntypes>
-				<useGenderedHeads>true</useGenderedHeads>
-				<useGenderedBodies>false</useGenderedBodies>
+				</bodyTypes>
+				<headTypes Inherit="False">
+					<li>SergMHeadA</li>
+					<!--
+					<li>SergMHeadB</li>
+					<li>SergMHeadC</li>
+					<li>SergMHeadD</li>
+					<li>SergMHeadE</li>
+					<li>SergMHeadF</li>
+					<li>SergMHeadG</li>
+					-->
+					<li>SergFHeadA</li>
+					<!--
+					<li>SergFHeadB</li>
+					<li>SergFHeadC</li>
+					<li>SergFHeadD</li>
+					<li>SergFHeadE</li>
+					<li>SergFHeadF</li>
+					<li>SergFHeadG</li>
+					-->
+				</headTypes>
 				<bodyAddons>
 					<li>
 						<path>TalSergal/Tail/Tail</path>
@@ -318,11 +323,32 @@
 			</alienPartGenerator>
 		</generalSettings>
 		<graphicPaths>
-			<li>
-				<head>TalSergal/Head/</head>
-				<body>TalSergal/Body/</body>
-				<skull>TalSergal/Skull/Skull</skull>
-			</li>
+			<skinShader>CutoutComplex</skinShader>
+			<head>
+				<path>TalSergal/Head/</path>
+				<headtypeGraphics>
+					<SergMHeadA>TalSergal/Head/Base/Male_A</SergMHeadA>
+					<SergMHeadB>TalSergal/Head/Base/Male_B</SergMHeadB>
+					<SergMHeadC>TalSergal/Head/Base/Male_C</SergMHeadC>
+					<SergMHeadD>TalSergal/Head/Base/Male_D</SergMHeadD>
+					<SergMHeadE>TalSergal/Head/Base/Male_E</SergMHeadE>
+					<SergMHeadF>TalSergal/Head/Base/Male_F</SergMHeadF>
+					<SergMHeadG>TalSergal/Head/Base/Male_G</SergMHeadG>
+					<SergFHeadA>TalSergal/Head/Base/Female_A</SergFHeadA>
+					<SergFHeadB>TalSergal/Head/Base/Female_B</SergFHeadB>
+					<SergFHeadC>TalSergal/Head/Base/Female_C</SergFHeadC>
+					<SergFHeadD>TalSergal/Head/Base/Female_D</SergFHeadD>
+					<SergFHeadE>TalSergal/Head/Base/Female_E</SergFHeadE>
+					<SergFHeadF>TalSergal/Head/Base/Female_F</SergFHeadF>
+					<SergFHeadG>TalSergal/Head/Base/Female_G</SergFHeadG>
+				</headtypeGraphics>
+			</head>
+			<body>
+				<path>TalSergal/Body/</path>
+			</body>
+			<skull>
+				<path>TalSergal/Skull/</path>
+			</skull>
 		</graphicPaths>
 		<styleSettings>
 			<li>

@@ -10,7 +10,7 @@
       <MoveSpeed>7</MoveSpeed>
 	  <MeleeWeapon_CooldownMultiplier>1</MeleeWeapon_CooldownMultiplier>
 	  <ResearchSpeedFactor>1</ResearchSpeedFactor>
-	  <HungerRateMultiplier>1</HungerRateMultiplier>
+	  <BedHungerRateFactor>1</BedHungerRateFactor>
 	  <ShootingAccuracyPawn>-1</ShootingAccuracyPawn>
 	  <MeleeDodgeChance>15</MeleeDodgeChance>
       <ComfyTemperatureMin>5</ComfyTemperatureMin>
@@ -107,10 +107,6 @@
         <li>
           <def>HumanlikeBaby</def>
           <minAge>0</minAge>
-        </li>
-        <li>
-          <def>HumanlikeToddler</def>
-          <minAge>1.2</minAge>
         </li>
         <li>
           <def>HumanlikeChild</def>
@@ -262,15 +258,14 @@
 						</first>
 					</li>
 				</colorChannels>
-				<alienbodytypes>
+				<bodyTypes>
 					<li>Male</li>
 					<li>Thin</li>
-				</alienbodytypes>
-				<aliencrowntypes>
-					<li>Nevrean_Head</li>
-				</aliencrowntypes>
-				<useGenderedHeads>true</useGenderedHeads>
-				<useGenderedBodies>false</useGenderedBodies>
+				</bodyTypes>
+				<headTypes>
+					<li>Male_Nevrean_Normal</li>
+					<li>Female_Nevrean_Normal</li>
+				</headTypes>
 				<bodyAddons>
 					<li>
 						<path>TalNevrean/Tail/Tail</path>
@@ -307,11 +302,15 @@
 			</alienPartGenerator>
 		</generalSettings>
 		<graphicPaths>
-			<li>
-				<head>TalNevrean/Head/</head>
-				<body>TalNevrean/Body/</body>
-				<skull>TalSergal/Skull/Skull</skull>
-			</li>
+			<head>
+				<path>TalNevrean/Head/</path>
+			</head>
+			<body>
+				<path>TalNevrean/Body/</path>
+			</body>
+			<skull>
+				<path>TalSergal/Skull/Skull</path>
+			</skull>
 		</graphicPaths>
 		<styleSettings>
 			<li>

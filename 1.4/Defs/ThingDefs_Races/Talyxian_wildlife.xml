@@ -623,7 +623,6 @@
       <li>
         <label>head</label>
         <capacities>
-          <li>Sharp</li>
 		  <li>Scratch</li>
         </capacities>
         <power>16</power>
@@ -757,7 +756,6 @@
       <li>
         <label>head</label>
         <capacities>
-          <li>Sharp</li>
 		  <li>Scratch</li>
         </capacities>
         <power>10</power>
@@ -839,7 +837,6 @@
       <li>
         <label>head</label>
         <capacities>
-          <li>Sharp</li>
 		  <li>Scratch</li>
         </capacities>
         <power>5</power>

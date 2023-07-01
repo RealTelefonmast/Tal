@@ -105,7 +105,7 @@
 			<Nutrition>0.150</Nutrition>
 		</statBases>
 		<graphicData>
-			<texPath>Things/Plants/Tal_grass</texPath>
+			<texPath>Things/Plants/Tal_Grass</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
 			<shaderType>TransparentPlant</shaderType>
 		</graphicData>
