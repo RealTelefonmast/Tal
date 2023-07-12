@@ -136,7 +136,7 @@ namespace VilousTal
 
         public void Notify_PlantHarvested(Pawn byPawn)
         {
-            curPlant.PlantCollected(byPawn);
+            curPlant.PlantCollected(byPawn, PlantDestructionMode.Cut);
             curPlant = null;
         }
 
