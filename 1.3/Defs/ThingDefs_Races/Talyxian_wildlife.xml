@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<!-- ============================TAL DOG================================ -->
+  <!-- ============================TAL DOG================================ -->
 
   <ThingDef ParentName="AnimalThingBase">
     <defName>TalyxianDog</defName>
     <label>talyxian dog</label>
-    <description>A dog-like Talyxian organism. Commonly kept as pets by most Eltus races such as Sergals. Has minor armor and better eyesight than most dogs but lower damage potential.</description>
+    <description>A dog-like Talyxian organism. Commonly kept as pets by most Eltus races such as
+      Sergals. Has minor armor and better eyesight than most dogs but lower damage potential.</description>
     <statBases>
       <MoveSpeed>5.2</MoveSpeed>
-	  <MeleeDodgeChance>12</MeleeDodgeChance>
+      <MeleeDodgeChance>12</MeleeDodgeChance>
       <MarketValue>265</MarketValue>
       <ComfyTemperatureMin>-15</ComfyTemperatureMin>
-	  <ComfyTemperatureMax>50</ComfyTemperatureMax>
-	  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
     </statBases>
     <tools>
@@ -106,25 +107,31 @@
     <tradeTags>
       <li>AnimalCommon</li>
       <li>AnimalPet</li>
-	  <li>AnimalTal</li>
+      <li>AnimalTal</li>
     </tradeTags>
   </ThingDef>
-  
+
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>TalyxianDog</defName>
     <label>talyxian dog</label>
     <race>TalyxianDog</race>
     <combatPower>70</combatPower>
     <ecoSystemWeight>0.6</ecoSystemWeight>
-	
-		<alternateGraphicChance>1</alternateGraphicChance>
-		<alternateGraphics>
-			<li><texPath>Things/Pawn/Animal/Taldog/TalDog_A</texPath></li>
-			<li><texPath>Things/Pawn/Animal/Taldog/TalDog_B</texPath></li>
-			<li><texPath>Things/Pawn/Animal/Taldog/TalDog_C</texPath></li>
 
-		</alternateGraphics>
-		
+    <alternateGraphicChance>1</alternateGraphicChance>
+    <alternateGraphics>
+      <li>
+        <texPath>Things/Pawn/Animal/Taldog/TalDog_A</texPath>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Taldog/TalDog_B</texPath>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Taldog/TalDog_C</texPath>
+      </li>
+
+    </alternateGraphics>
+
     <lifeStages>
       <li>
         <label>talyxian puppy</label>
@@ -171,38 +178,38 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  
+
   <!-- ============================TAL GOAT================================ -->
-  
-   <ThingDef ParentName="AnimalThingBase">
+
+  <ThingDef ParentName="AnimalThingBase">
     <defName>TalyxianGoat</defName>
     <label>talyxian goat</label>
     <description>A skeletal creature that grows a heat resistant silk. Has a very poor meat yield.</description>
     <statBases>
       <MoveSpeed>3.5</MoveSpeed>
       <ComfyTemperatureMin>-5</ComfyTemperatureMin>
-	  <ComfyTemperatureMax>75</ComfyTemperatureMax>
-	  <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-	  <ArmorRating_Heat>0.20</ArmorRating_Heat>
+      <ComfyTemperatureMax>75</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.20</ArmorRating_Heat>
       <MarketValue>200</MarketValue>
-	  <MeatAmount>17</MeatAmount>
+      <MeatAmount>17</MeatAmount>
     </statBases>
     <uiIconScale>1.2</uiIconScale>
     <tools>
       <li>
-          <label>Horn</label>
+        <label>Horn</label>
         <capacities>
           <li>Blunt</li>
-		  <li>Scratch</li>
+          <li>Scratch</li>
         </capacities>
         <power>7</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <chanceFactor>0.5</chanceFactor>
-	  </li>
+      </li>
     </tools>
-	<comps>
+    <comps>
       <li Class="CompProperties_Shearable">
         <woolDef>TalyxianSilk</woolDef>
         <shearIntervalDays>9</shearIntervalDays>
@@ -212,14 +219,14 @@
     <race>
       <body>QuadrupedAnimalWithHoovesAndHorn</body>
       <baseBodySize>0.75</baseBodySize>
-	  <herdAnimal>true</herdAnimal>
-	  <packAnimal>false</packAnimal>
+      <herdAnimal>true</herdAnimal>
+      <packAnimal>false</packAnimal>
       <baseHealthScale>0.7</baseHealthScale>
       <baseHungerRate>0.45</baseHungerRate>
       <foodType>VegetarianRoughAnimal</foodType>
       <leatherDef>TalyxianSilk</leatherDef>
       <trainability>None</trainability>
-	  <wildness>0.6</wildness>
+      <wildness>0.6</wildness>
       <roamMtbDays>5</roamMtbDays>
       <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
       <manhunterOnDamageChance>0</manhunterOnDamageChance>
@@ -258,21 +265,25 @@
     <tradeTags>
       <li>AnimalCommon</li>
       <li>AnimalFarm</li>
-	  <li>AnimalTal</li>
+      <li>AnimalTal</li>
     </tradeTags>
   </ThingDef>
-   <PawnKindDef ParentName="AnimalKindBase">
+  <PawnKindDef ParentName="AnimalKindBase">
     <defName>TalyxianGoat</defName>
     <label>talyxian goat</label>
     <race>TalyxianGoat</race>
     <combatPower>45</combatPower>
     <ecoSystemWeight>0.5</ecoSystemWeight>
-	<alternateGraphicChance>1</alternateGraphicChance>
-		<alternateGraphics>
-			<li><texPath>Things/Pawn/Animal/Talgoat/Talgoat_A</texPath></li>
-			<li><texPath>Things/Pawn/Animal/Talgoat/Talgoat_B</texPath></li>
+    <alternateGraphicChance>1</alternateGraphicChance>
+    <alternateGraphics>
+      <li>
+        <texPath>Things/Pawn/Animal/Talgoat/Talgoat_A</texPath>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Talgoat/Talgoat_B</texPath>
+      </li>
 
-		</alternateGraphics>
+    </alternateGraphics>
     <lifeStages>
       <li>
         <label>baby talyxian goat</label>
@@ -320,43 +331,48 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  
-  <!-- ============================TAL Stalker================================ -->
-    
 
-	<ThingDef ParentName="BigCatThingBase">
-		<defName>TalyxianStalker</defName>
-		<label>talyxian stalker</label>
-		<description>A feline-like Talyxian organism. Commonly kept as pets by most Eltus races such as Sergals. They have have high genetic diversity</description>
-		<statBases>
-			<ComfyTemperatureMin>-25</ComfyTemperatureMin>
-			<MoveSpeed>3.5</MoveSpeed>
-			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
-		</statBases>
-	
-		<race>
-			<leatherDef>Leather_TalStalker</leatherDef>
-			<trainability>Advanced</trainability>
-			<petness>1</petness>
-		</race>
-		<tradeTags>
-			<li>AnimalCommon</li>
-			<li>AnimalPet</li>
-			<li>AnimalTal</li>
-		</tradeTags>
-	</ThingDef>
+  <!-- ============================TAL Stalker================================ -->
+
+
+  <ThingDef ParentName="BigCatThingBase">
+    <defName>TalyxianStalker</defName>
+    <label>talyxian stalker</label>
+    <description>A feline-like Talyxian organism. Commonly kept as pets by most Eltus races such as
+      Sergals. They have have high genetic diversity</description>
+    <statBases>
+      <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+      <MoveSpeed>3.5</MoveSpeed>
+      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+    </statBases>
+
+    <race>
+      <leatherDef>Leather_TalStalker</leatherDef>
+      <trainability>Advanced</trainability>
+      <petness>1</petness>
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+      <li>AnimalPet</li>
+      <li>AnimalTal</li>
+    </tradeTags>
+  </ThingDef>
 
   <PawnKindDef ParentName="BigCatKindBase">
     <defName>TalyxianStalker</defName>
     <label>talyxian stalker</label>
     <race>TalyxianStalker</race>
-		<alternateGraphicChance>1</alternateGraphicChance>
-		<alternateGraphics>
-			<li><texPath>Things/Pawn/Animal/Talstalkers/TalStalk_A</texPath></li>
-			<li><texPath>Things/Pawn/Animal/Talstalkers/TalStalk_B</texPath></li>
+    <alternateGraphicChance>1</alternateGraphicChance>
+    <alternateGraphics>
+      <li>
+        <texPath>Things/Pawn/Animal/Talstalkers/TalStalk_A</texPath>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Talstalkers/TalStalk_B</texPath>
+      </li>
 
-		</alternateGraphics>
+    </alternateGraphics>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -398,9 +414,9 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  
+
   <!-- ============================Snail Cow================================ -->
-  
+
   <ThingDef ParentName="AnimalThingBase">
     <defName>SnailCow</defName>
     <label>snail cow</label>
@@ -410,7 +426,7 @@
       <MarketValue>300</MarketValue>
       <ComfyTemperatureMin>-15</ComfyTemperatureMin>
       <ComfyTemperatureMax>50</ComfyTemperatureMax>
-	  <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
       <FilthRate>18</FilthRate>
     </statBases>
@@ -505,14 +521,20 @@
     <race>SnailCow</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
-	
-	<alternateGraphicChance>1</alternateGraphicChance>
-		<alternateGraphics>
-			<li><texPath>Things/Pawn/Animal/Snailcow/Snailcow_A</texPath></li>
-			<li><texPath>Things/Pawn/Animal/Snailcow/Snailcow_B</texPath></li>
-			<li><texPath>Things/Pawn/Animal/Snailcow/Snailcow_C</texPath></li>
 
-		</alternateGraphics>
+    <alternateGraphicChance>1</alternateGraphicChance>
+    <alternateGraphics>
+      <li>
+        <texPath>Things/Pawn/Animal/Snailcow/Snailcow_A</texPath>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Snailcow/Snailcow_B</texPath>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Snailcow/Snailcow_C</texPath>
+      </li>
+
+    </alternateGraphics>
     <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
@@ -562,25 +584,26 @@
     </lifeStages>
   </PawnKindDef>
 
- <!-- ============================Urchin Cow================================ -->
+  <!-- ============================Urchin Cow================================ -->
 
-<ThingDef ParentName="AnimalThingBase">
+  <ThingDef ParentName="AnimalThingBase">
     <defName>UrchinCow</defName>
     <label>urchin cow</label>
-    <description>A large rotund urchin commonly used as a farm and work animal by Eltus races. It can Carry Large amounts of supplies.</description>
+    <description>A large rotund urchin commonly used as a farm and work animal by Eltus races. It
+      can Carry Large amounts of supplies.</description>
     <statBases>
       <MoveSpeed>1.8</MoveSpeed>
       <MarketValue>300</MarketValue>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
       <ComfyTemperatureMax>55</ComfyTemperatureMax>
-	  <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
       <FilthRate>15</FilthRate>
     </statBases>
     <uiIconScale>1.35</uiIconScale>
     <race>
       <herdAnimal>true</herdAnimal>
-	  <packAnimal>true</packAnimal>
+      <packAnimal>true</packAnimal>
       <body>Echinoderm</body>
       <baseBodySize>3.5</baseBodySize>
       <baseHealthScale>2</baseHealthScale>
@@ -623,8 +646,8 @@
       <li>
         <label>head</label>
         <capacities>
-          <li>Sharp</li>
-		  <li>Scratch</li>
+          <li>Stab</li>
+          <li>Scratch</li>
         </capacities>
         <power>16</power>
         <cooldownTime>3</cooldownTime>
@@ -633,10 +656,9 @@
       </li>
     </tools>
   </ThingDef>
-  
 
 
-<PawnKindDef ParentName="AnimalKindBase">
+  <PawnKindDef ParentName="AnimalKindBase">
     <defName>UrchinCow</defName>
     <label>urchin cow</label>
     <race>UrchinCow</race>
@@ -690,11 +712,13 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  
-   <ThingDef ParentName="AnimalThingBase">
+
+  <ThingDef ParentName="AnimalThingBase">
     <defName>Odei</defName>
     <label>odei</label>
-    <description>An explosive talyxian organism with feeling tendrils, one of the only sources of chemfuel on Tal. tends to be more irritable than chemfuel producing animals from animals more native to the rim.</description>
+    <description>An explosive talyxian organism with feeling tendrils, one of the only sources of
+      chemfuel on Tal. tends to be more irritable than chemfuel producing animals from animals more
+      native to the rim.</description>
     <statBases>
       <MoveSpeed>2</MoveSpeed>
       <MarketValue>600</MarketValue>
@@ -757,8 +781,8 @@
       <li>
         <label>head</label>
         <capacities>
-          <li>Sharp</li>
-		  <li>Scratch</li>
+          <li>Stab</li>
+          <li>Scratch</li>
         </capacities>
         <power>10</power>
         <cooldownTime>2</cooldownTime>
@@ -767,7 +791,7 @@
       </li>
     </tools>
   </ThingDef>
-  
+
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>Odei</defName>
     <label>odei</label>
@@ -822,25 +846,26 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  
- <!-- ============================House Mite================================ -->
-  
+
+  <!-- ============================House Mite================================ -->
+
   <ThingDef ParentName="AnimalThingBase">
     <defName>HouseMite</defName>
     <label>house mite</label>
-    <description>An urchin-like Talyxian organism that are seen as pests due to them often getting into houses and eating all kinds of foods.</description>
+    <description>An urchin-like Talyxian organism that are seen as pests due to them often getting
+      into houses and eating all kinds of foods.</description>
     <statBases>
       <MoveSpeed>2</MoveSpeed>
-	   <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+      <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
       <MarketValue>50</MarketValue>
       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
     </statBases>
-   <tools>
+    <tools>
       <li>
         <label>head</label>
         <capacities>
-          <li>Sharp</li>
-		  <li>Scratch</li>
+          <li>Stab</li>
+          <li>Scratch</li>
         </capacities>
         <power>5</power>
         <cooldownTime>3</cooldownTime>
@@ -902,13 +927,19 @@
     <race>HouseMite</race>
     <combatPower>30</combatPower>
     <ecoSystemWeight>0.20</ecoSystemWeight>
-		<alternateGraphicChance>1</alternateGraphicChance>
-		<alternateGraphics>
-			<li><texPath>Things/Pawn/Animal/Housemite/Housemite_A</texPath></li>
-			<li><texPath>Things/Pawn/Animal/Housemite/Housemite_B</texPath></li>
-			<li><texPath>Things/Pawn/Animal/Housemite/Housemite_C</texPath></li>
+    <alternateGraphicChance>1</alternateGraphicChance>
+    <alternateGraphics>
+      <li>
+        <texPath>Things/Pawn/Animal/Housemite/Housemite_A</texPath>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Housemite/Housemite_B</texPath>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Housemite/Housemite_C</texPath>
+      </li>
 
-		</alternateGraphics>
+    </alternateGraphics>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -948,14 +979,16 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  
+
   <!-- ============================Handstand Snail================================ -->
-  
+
   <ThingDef ParentName="AnimalThingBase">
     <defName>HandstandSnail</defName>
-	<!-- Featherless. Biped. THIS IS A MAN-->
+    <!-- Featherless. Biped. THIS IS A MAN-->
     <label>handstand snail</label>
-    <description>Also known as Talyxian Hamsters, these suspiciously bean shaped creatures are commonly kept as pets. Most of their face is obscured by the fold on their head. They have a poor center of mass and constantly tumble about</description>
+    <description>Also known as Talyxian Hamsters, these suspiciously bean shaped creatures are
+      commonly kept as pets. Most of their face is obscured by the fold on their head. They have a
+      poor center of mass and constantly tumble about</description>
     <statBases>
       <MoveSpeed>4</MoveSpeed>
       <MarketValue>50</MarketValue>
@@ -1026,15 +1059,21 @@
     <defName>HandstandSnail</defName>
     <label>handstand snail</label>
     <race>HandstandSnail</race>
-	<alternateGraphicChance>0.87</alternateGraphicChance>
-	<alternateGraphics>
-      <li><color>(0.498,0,0,1)</color></li>
-      <li><color>(0.333,0.333,0.333,1)</color></li>
-	  <li><color>(0.498,0,0.431,1)</color></li>
+    <alternateGraphicChance>0.87</alternateGraphicChance>
+    <alternateGraphics>
+      <li>
+        <color>(0.498,0,0,1)</color>
+      </li>
+      <li>
+        <color>(0.333,0.333,0.333,1)</color>
+      </li>
+      <li>
+        <color>(0.498,0,0.431,1)</color>
+      </li>
     </alternateGraphics>
     <combatPower>1</combatPower>
     <ecoSystemWeight>0.20</ecoSystemWeight>
-	
+
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -1074,20 +1113,22 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  
+
   <!-- ============================TAL WOLF================================ -->
-  
+
   <ThingDef ParentName="AnimalThingBase">
     <defName>TalyxianWolf</defName>
     <label>talyxian wolf</label>
-    <description>Despite it's name and appearance, this large Talyxian organism has extremely different biology than talyxian dogs, actually being closer related to Talyxian rooters. They are extremely rare and are given high regard in shigu society.</description>
+    <description>Despite it's name and appearance, this large Talyxian organism has extremely
+      different biology than talyxian dogs, actually being closer related to Talyxian rooters. They
+      are extremely rare and are given high regard in shigu society.</description>
     <statBases>
       <MoveSpeed>5.5</MoveSpeed>
-	  <MeleeDodgeChance>14</MeleeDodgeChance>
+      <MeleeDodgeChance>14</MeleeDodgeChance>
       <MarketValue>265</MarketValue>
       <ComfyTemperatureMin>-15</ComfyTemperatureMin>
-	  <ComfyTemperatureMax>50</ComfyTemperatureMax>
-	  <ArmorRating_Blunt>0.17</ArmorRating_Blunt>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <ArmorRating_Blunt>0.17</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
     </statBases>
     <tools>
@@ -1180,10 +1221,10 @@
     <tradeTags>
       <li>AnimalCommon</li>
       <li>AnimalPet</li>
-	  <li>AnimalTal</li>
+      <li>AnimalTal</li>
     </tradeTags>
   </ThingDef>
-  
+
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>TalyxianWolf</defName>
     <label>talyxian wolf</label>
@@ -1191,7 +1232,7 @@
     <combatPower>70</combatPower>
     <ecoSystemWeight>0.6</ecoSystemWeight>
 
-		
+
     <lifeStages>
       <li>
         <label>talyxian wolf puppy</label>
@@ -1238,5 +1279,5 @@
       </li>
     </lifeStages>
   </PawnKindDef>
- </Defs>
+</Defs>
  

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Male_Nevrean_Normal</defName>
+		<graphicPath>/TalNevrean/Head/Male_Nevrean_Head</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Female_Nevrean_Normal</defName>
+		<graphicPath>/TalNevrean/Head/Female_Nevrean_Head</graphicPath>
+		<gender>Female</gender>
+	</HeadTypeDef>
+  
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Sergal_Head</defName>
+		<graphicPath>/TalSergal/Head/Male_Sergal_Head</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Sergal_Head_A</defName>
+		<graphicPath>/TalSergal/Head/Male_Sergal_Head_A</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Sergal_Head_B</defName>
+		<graphicPath>/TalSergal/Head/Male_Sergal_Head_B</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Sergal_Head_C</defName>
+		<graphicPath>/TalSergal/Head/Male_Sergal_Head_C</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Sergal_Head_D</defName>
+		<graphicPath>/TalSergal/Head/Male_Sergal_Head_D</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Sergal_Head_E</defName>
+		<graphicPath>/TalSergal/Head/Male_Sergal_Head_E</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Sergal_Head_F</defName>
+		<graphicPath>/TalSergal/Head/Male_Sergal_Head_F</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+</Defs>

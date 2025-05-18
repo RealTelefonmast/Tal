@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<VilousTal.TalConfigDef>
+		<defName>MainConfigDef</defName>
+		<sergProps>
+			<!--
+			<capacityOffsets>
+				<Manipulation>0</Manipulation>
+				
+			</capacityOffsets>
+			-->
+			<meleeCDMultiplier>0.8</meleeCDMultiplier>
+			<canonBodySize>1</canonBodySize>
+			<fanonBodySize>1.2</fanonBodySize>
+		</sergProps>
+	</VilousTal.TalConfigDef>
+	
+</Defs>

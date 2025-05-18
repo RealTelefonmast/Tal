@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+<Defs>
+
+  <!-- ============================SERGAL================================ -->
+
+<BodyPartDef>
+    <defName>TalSergalTail</defName>
+    <label>tail</label>
+    <hitPoints>30</hitPoints>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+</BodyPartDef>
+
+<BodyPartDef>
+    <defName>SergalToe</defName>
+    <label>toe</label>
+    <hitPoints>8</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbDigit</li>
+	  <li>ManipulationLimbDigit</li>
+    </tags>
+</BodyPartDef>
+
+<BodyPartDef>
+    <defName>SergalFoot</defName>
+    <label>foot</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbSegment</li>
+	  <li>ManipulationLimbSegment</li>
+    </tags>
+</BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SergalLeg</defName>
+    <label>leg</label>
+    <hitPoints>30</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>
+    <tags>
+      <li>MovingLimbCore</li>
+	  <li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  
+   <!-- ============================TALWOLF================================ -->
+  
+  <BodyPartDef>
+    <defName>SolarWing</defName>
+    <label>solar wing</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>0.7</frostbiteVulnerability>
+    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+    <skinCovered>true</skinCovered>
+</BodyPartDef>
+
+</Defs>

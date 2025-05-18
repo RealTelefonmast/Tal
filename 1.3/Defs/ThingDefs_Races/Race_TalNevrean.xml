@@ -9,7 +9,7 @@
       <MarketValue>1750</MarketValue>
       <MoveSpeed>7</MoveSpeed>
 	  <MeleeWeapon_CooldownMultiplier>1</MeleeWeapon_CooldownMultiplier>
-	  <researchSpeedFactor>1</researchSpeedFactor>
+	  <ResearchSpeedFactor>1</ResearchSpeedFactor>
 	  <HungerRateMultiplier>1</HungerRateMultiplier>
 	  <ShootingAccuracyPawn>-1</ShootingAccuracyPawn>
 	  <MeleeDodgeChance>15</MeleeDodgeChance>

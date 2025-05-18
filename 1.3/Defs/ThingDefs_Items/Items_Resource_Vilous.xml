@@ -3,26 +3,27 @@
   <ThingDef ParentName="WoolBase">
     <defName>TalyxianSilk</defName>
     <label>talyxian silk</label>
-    <description>Strands of Talyxian silk. Very thick strands of a silk-like material interlaced with with brittle bone-like plates. it provides good heat insulation.</description>
+    <description>Strands of Talyxian silk. Very thick strands of a silk-like material interlaced
+      with with brittle bone-like plates. it provides good heat insulation.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Talyxiansilk</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <statBases>
       <StuffPower_Insulation_Heat>25</StuffPower_Insulation_Heat>
-	  <StuffPower_Armor_Heat>2</StuffPower_Armor_Heat>
-	  <StuffPower_Armor_Sharp>0.81</StuffPower_Armor_Sharp>
-	  <Flammability>0</Flammability>
+      <StuffPower_Armor_Heat>2</StuffPower_Armor_Heat>
+      <StuffPower_Armor_Sharp>0.81</StuffPower_Armor_Sharp>
+      <Flammability>0</Flammability>
     </statBases>
     <stuffProps>
       <color>(100,127,140)</color>
       <commonality>0.80</commonality>
-	   <statFactors>
+      <statFactors>
         <Beauty>1.4</Beauty>
       </statFactors>
     </stuffProps>
   </ThingDef>
-  
+
   <ThingDef ParentName="ResourceBase">
     <defName>VilousClay</defName>
     <label>Vilous Clay</label>
@@ -41,18 +42,19 @@
     <healthAffectsPrice>false</healthAffectsPrice>
     <thingCategories>
       <li>ResourcesRaw</li>
-	  <li>shigu</li>
+      <li>Shigu</li>
     </thingCategories>
     <deepCommonality>4</deepCommonality>
     <deepCountPerPortion>45</deepCountPerPortion>
     <deepLumpSizeRange>20~30</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
   </ThingDef>
-  
+
   <ThingDef ParentName="ResourceBase">
     <defName>VilousCeramic</defName>
     <label>Vilous ceramic</label>
-    <description>Fired and refined Vilous ceramic. Shigu clans often use this material for sharp weapons.</description>
+    <description>Fired and refined Vilous ceramic. Shigu clans often use this material for sharp
+      weapons.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Vilousceramic</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -60,7 +62,7 @@
     <soundInteract>Stone_Drop</soundInteract>
     <soundDrop>Stone_Drop</soundDrop>
     <statBases>
-	  <Beauty>1</Beauty>
+      <Beauty>1</Beauty>
       <MarketValue>2.7</MarketValue>
       <Mass>.3</Mass>
       <StuffPower_Armor_Sharp>1.6</StuffPower_Armor_Sharp>
@@ -75,7 +77,7 @@
     <healthAffectsPrice>false</healthAffectsPrice>
     <thingCategories>
       <li>ResourcesRaw</li>
-	  <li>shigu</li>
+      <li>Shigu</li>
     </thingCategories>
     <deepCommonality>4</deepCommonality>
     <deepCountPerPortion>45</deepCountPerPortion>
@@ -85,7 +87,7 @@
     <stuffProps>
       <categories>
         <li>Metallic</li>
-		<li>shigu</li>
+        <li>Shigu</li>
       </categories>
       <appearance>Bricks</appearance>
       <commonality>.75</commonality>
@@ -96,8 +98,8 @@
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
       <statFactors>
         <MaxHitPoints>2</MaxHitPoints>
-		<DoorOpenSpeed>0.45</DoorOpenSpeed>
-		<MeleeWeapon_CooldownMultiplier>.85</MeleeWeapon_CooldownMultiplier>
+        <DoorOpenSpeed>0.45</DoorOpenSpeed>
+        <MeleeWeapon_CooldownMultiplier>.85</MeleeWeapon_CooldownMultiplier>
         <Beauty>1</Beauty>
         <Flammability>0</Flammability>
       </statFactors>
@@ -105,7 +107,7 @@
     </stuffProps>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
-  
+
   <ThingDef ParentName="ResourceBase">
     <defName>Urchin_Shards</defName>
     <label>Urchin Shards</label>
@@ -124,7 +126,7 @@
     <healthAffectsPrice>false</healthAffectsPrice>
     <thingCategories>
       <li>ResourcesRaw</li>
-	  <li>shigu</li>
+      <li>Shigu</li>
     </thingCategories>
     <deepCommonality>4</deepCommonality>
     <deepCountPerPortion>45</deepCountPerPortion>

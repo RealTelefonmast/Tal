@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<FleshTypeDef>
+		<defName>Flesh_Sergal</defName>
+		<label>sergal flesh</label>
+	</FleshTypeDef>
+
+	<FleshTypeDef>
+		<defName>Flesh_Nevrean</defName>
+		<label>sergal flesh</label>
+	</FleshTypeDef>
+</Defs>

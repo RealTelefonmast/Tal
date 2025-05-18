@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="LeatherBase_Tal">
+		<defName>Leather_TalDog</defName>
+		<label>talyxian dog leather</label>
+		<graphicData>
+			<!--<texPath>Things/Item/Resource/Vilousceramic</texPath>-->
+			<color>(59,155,255)</color>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<DeteriorationRate>1</DeteriorationRate>
+			<Mass>0.05</Mass>
+			<Flammability>0.5</Flammability>
+			<MarketValue>3</MarketValue>
+		</statBases>
+		<stuffProps>
+			<color>(0,125,255)</color>
+			<commonality>0.01</commonality>
+		</stuffProps>
+	</ThingDef>
+
+</Defs>
